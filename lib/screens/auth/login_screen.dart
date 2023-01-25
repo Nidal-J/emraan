@@ -166,6 +166,21 @@ class LoginScreen extends GetView<LoginController> {
                   SizedBox(height: 18.h),
                   OutlinedButton(
                     onPressed: () {
+                      Get.offAllNamed(RoutesManager.merchantHomeScreen);
+                    },
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: ColorsManager.primary,
+                      alignment: Alignment.center,
+                      side: const BorderSide(
+                        color: ColorsManager.primary,
+                        width: 2,
+                      ),
+                    ),
+                    child: const Text('دخول كتاجر'),
+                  ),
+                  SizedBox(height: 10.h),
+                  OutlinedButton(
+                    onPressed: () {
                       Get.offAllNamed(RoutesManager.homeScreen);
                     },
                     style: OutlinedButton.styleFrom(

@@ -14,8 +14,8 @@ class ColorsManager {
   static const Color white = Color(0xFFFFFFFF);
   static const Color diabled = Color(0xFFB9B9B9);
 
-  static const Color shadow1 = Color.fromARGB(51, 0, 0, 0);
-  static const Color shadow2 = Color.fromARGB(26, 0, 0, 0);
+  static const Color shadow20 = Color.fromARGB(51, 0, 0, 0);
+  static const Color shadow10 = Color.fromARGB(26, 0, 0, 0);
   static const Color danger = Color(0xFFEB4335);
   static const Color success = Color(0xFF34A853);
   static const Color warning = Color(0xFFFBBC05);

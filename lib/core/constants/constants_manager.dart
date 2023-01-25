@@ -15,7 +15,7 @@ class ConstantsManager {
 
   static const List<BoxShadow> customBoxShadow20 = [
     BoxShadow(
-      color: ColorsManager.shadow2,
+      color: ColorsManager.shadow10,
       blurRadius: 20,
       spreadRadius: 5,
       offset: Offset(0, 4),
@@ -23,9 +23,18 @@ class ConstantsManager {
   ];
   static const List<BoxShadow> customBoxShadow10 = [
     BoxShadow(
-      color: ColorsManager.shadow1,
+      color: ColorsManager.shadow20,
       blurRadius: 10,
       offset: Offset(0, 0),
+    ),
+  ];
+
+  static const List<BoxShadow> testBoxShadow1 = [
+    BoxShadow(
+      color: ColorsManager.shadow10,
+      blurRadius: 10,
+      spreadRadius: 2.5,
+      offset: Offset(0, 4),
     ),
   ];
 }

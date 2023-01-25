@@ -30,6 +30,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/icons/
+    - assets/images/merchant_icons/
     - assets/images/profile_icons/
 
   fonts:

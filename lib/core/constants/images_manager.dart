@@ -23,6 +23,7 @@ class ImagesManager {
   static const String avatar = '$mainPath/avatar.png';
   static const String map = '$mainPath/map.jpg';
   static const String placeholder = '$mainPath/placeholder.png';
+  static const String notifyRespond = '$mainPath/notify_respond.gif';
 
   static const String iconsPath = 'assets/images/icons';
   static const String logo = '$iconsPath/logo.png';
@@ -41,7 +42,10 @@ class ImagesManager {
   static const String bill = '$iconsPath/bill.svg';
   static const String payment = '$iconsPath/payment.svg';
 
+  static const String trucktor = '$iconsPath/trucktor.svg';
+
   static const String profileIconsPath = 'assets/images/profile_icons';
+  static const String abroad = '$profileIconsPath/abroad.svg';
   static const List<String> profileIcons = [
     '$profileIconsPath/balance.svg',
     '$profileIconsPath/address.svg',
@@ -59,5 +63,12 @@ class ImagesManager {
     '$profileIconsPath/about_us.svg',
     '$profileIconsPath/privacy.svg',
   ];
-  static const String abroad = '$profileIconsPath/abroad.svg';
+  static const String merchantHomeIconsPath = 'assets/images/merchant_icons';
+  static const List<String> merchantHomeIcons = [
+    '$merchantHomeIconsPath/orders.svg',
+    '$merchantHomeIconsPath/products.svg',
+    '$merchantHomeIconsPath/packages.svg',
+    '$merchantHomeIconsPath/offers.svg',
+    '$iconsPath/person.svg',
+  ];
 }

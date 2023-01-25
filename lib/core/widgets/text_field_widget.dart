@@ -20,6 +20,7 @@ class TextFieldWidget extends StatelessWidget {
     this.readOnly = false,
     this.fullColored = false,
     this.filled = false,
+    this.isValidated = true,
     this.maxLines = 1,
     this.minLines = 1,
     this.onChange,
@@ -40,6 +41,7 @@ class TextFieldWidget extends StatelessWidget {
   final bool readOnly;
   final bool fullColored;
   final bool filled;
+  final bool isValidated;
   final int maxLines;
   final int minLines;
   final Function(String)? onChange;
@@ -57,9 +59,9 @@ class TextFieldWidget extends StatelessWidget {
           controller: controller,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           validator: (value) {
-            if (value == null || value.trim().isEmpty) {
+            if ((value == null || value.trim().isEmpty) && isValidated) {
               return 'هذا الحقل مطلوب';
-            } else if (isPassword && value.length < 8) {
+            } else if (isPassword && value!.length < 8) {
               return 'كلمة المرور يجب ألا تقل عن 8 رموز';
             }
             // TODO

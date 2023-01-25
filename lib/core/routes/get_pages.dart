@@ -1,39 +1,45 @@
-import 'package:emraan/getx/bindings/app/payment_binding.dart';
-import 'package:emraan/getx/bindings/app/products_details_binding.dart';
+import 'package:emraan/getx/bindings/customer_app/notifications_binding.dart';
+import 'package:emraan/getx/bindings/customer_app/payment_binding.dart';
+import 'package:emraan/getx/bindings/customer_app/products_details_binding.dart';
 import 'package:emraan/getx/bindings/auth/change_password_binding.dart';
-import 'package:emraan/screens/app/cart_screen.dart';
-import 'package:emraan/screens/app/categories_screen.dart';
-import 'package:emraan/screens/app/offers_screen.dart';
-import 'package:emraan/screens/app/order_details_screen.dart';
-import 'package:emraan/screens/app/payment/payment_screen.dart';
-import 'package:emraan/screens/app/payment/payment_success_screen.dart';
-import 'package:emraan/screens/app/product_details_screen.dart';
-import 'package:emraan/screens/app/products_screen.dart';
-import 'package:emraan/screens/app/profile/account_balance/account_balance_screen.dart';
-import 'package:emraan/screens/app/profile/account_balance/add_payment_card_screen.dart';
-import 'package:emraan/screens/app/profile/address_screen.dart';
-import 'package:emraan/screens/app/profile/feedbacks/add_feedback_screen.dart';
-import 'package:emraan/screens/app/profile/feedbacks/feedback_details_screen.dart';
-import 'package:emraan/screens/app/profile/feedbacks/feedbacks_screen.dart';
-import 'package:emraan/screens/app/profile/my_profile/change_password_screen.dart';
-import 'package:emraan/screens/app/profile/my_profile/edit_my_profile_screen.dart';
-import 'package:emraan/screens/app/profile/my_profile/my_profile_screen.dart';
-import 'package:emraan/screens/app/profile/services_evaluations/edit_services_evaluation_screen.dart';
-import 'package:emraan/screens/app/profile/services_evaluations/services_evaluation_screen.dart';
-import 'package:emraan/screens/app/profile/settings/about_us_screen.dart';
-import 'package:emraan/screens/app/profile/settings/languages_screen.dart';
-import 'package:emraan/screens/app/profile/settings/our_address_screen.dart';
-import 'package:emraan/screens/app/profile/settings/privacy_policy_screen.dart';
-import 'package:emraan/screens/app/profile/settings/settings_screen.dart';
-import 'package:emraan/screens/app/profile/wish_list_screen.dart';
-import 'package:emraan/screens/app/store/store_screen.dart';
+import 'package:emraan/getx/bindings/merchant_app/merchant_home_binding.dart';
+import 'package:emraan/screens/customer_app/cart_screen.dart';
+import 'package:emraan/screens/customer_app/categories_screen.dart';
+import 'package:emraan/screens/customer_app/notification/notification_reject_screen.dart';
+import 'package:emraan/screens/customer_app/notification/notifications_screen.dart';
+import 'package:emraan/screens/customer_app/offers_screen.dart';
+import 'package:emraan/screens/customer_app/order_details_screen.dart';
+import 'package:emraan/screens/customer_app/payment/payment_screen.dart';
+import 'package:emraan/screens/customer_app/payment/payment_success_screen.dart';
+import 'package:emraan/screens/customer_app/product_details_screen.dart';
+import 'package:emraan/screens/customer_app/products_screen.dart';
+import 'package:emraan/screens/customer_app/profile/account_balance/account_balance_screen.dart';
+import 'package:emraan/screens/customer_app/profile/account_balance/add_payment_card_screen.dart';
+import 'package:emraan/screens/customer_app/profile/address_screen.dart';
+import 'package:emraan/screens/customer_app/profile/feedbacks/add_feedback_screen.dart';
+import 'package:emraan/screens/customer_app/profile/feedbacks/feedback_details_screen.dart';
+import 'package:emraan/screens/customer_app/profile/feedbacks/feedbacks_screen.dart';
+import 'package:emraan/screens/customer_app/profile/my_profile/change_password_screen.dart';
+import 'package:emraan/screens/customer_app/profile/my_profile/edit_my_profile_screen.dart';
+import 'package:emraan/screens/customer_app/profile/my_profile/my_profile_screen.dart';
+import 'package:emraan/screens/customer_app/profile/services_evaluations/edit_services_evaluation_screen.dart';
+import 'package:emraan/screens/customer_app/profile/services_evaluations/services_evaluation_screen.dart';
+import 'package:emraan/screens/customer_app/profile/settings/about_us_screen.dart';
+import 'package:emraan/screens/customer_app/profile/settings/languages_screen.dart';
+import 'package:emraan/screens/customer_app/profile/settings/our_address_screen.dart';
+import 'package:emraan/screens/customer_app/profile/settings/privacy_policy_screen.dart';
+import 'package:emraan/screens/customer_app/profile/settings/settings_screen.dart';
+import 'package:emraan/screens/customer_app/profile/wish_list_screen.dart';
+import 'package:emraan/screens/customer_app/store_screen.dart';
+import 'package:emraan/screens/merchant_app/merchant_home_screen.dart';
 import 'package:flutter/animation.dart';
 import 'package:get/get.dart';
 import '../../getx/bindings/auth/verification_binding.dart';
+import '../../screens/customer_app/notification/notification_status_screen.dart';
 import '../../screens/auth/verification_screen.dart';
 import '../../screens/intro/welcome_screen.dart';
 import '../../core/routes/routes_manager.dart';
-import '../../getx/bindings/app/home_binding.dart';
+import '../../getx/bindings/customer_app/home_binding.dart';
 import '../../getx/bindings/auth/reset_password_binding.dart';
 import '../../getx/bindings/auth/forget_password_binding.dart';
 import '../../getx/bindings/auth/sign_in_binding.dart';
@@ -42,7 +48,7 @@ import '../../screens/auth/reset_password_screen.dart';
 import '../../screens/auth/forget_password_screen.dart';
 import '../../screens/auth/login_screen.dart';
 import '../../screens/auth/register_screen.dart';
-import '../../screens/app/home_screen.dart';
+import '../../screens/customer_app/home_screen.dart';
 
 final List<GetPage<dynamic>> getPages = [
   GetPage(
@@ -133,6 +139,22 @@ final List<GetPage<dynamic>> getPages = [
     page: () => const StoreScreen(),
     transition: Transition.fade,
   ),
+  GetPage(
+    name: RoutesManager.notificationsScreen,
+    page: () => const NotificationsScreen(),
+    transition: Transition.fade,
+  ),
+  GetPage(
+    name: RoutesManager.notificationsStatusScreen,
+    page: () => const NotificationStatusScreen(),
+    transition: Transition.fade,
+  ),
+  GetPage(
+    name: RoutesManager.notificationsRejectScreen,
+    page: () => const NotificationRejectScreen(),
+    binding: NotificationsBinding(),
+    transition: Transition.fade,
+  ),
   // Profile
   GetPage(
     name: RoutesManager.myProfileScreen,
@@ -206,21 +228,27 @@ final List<GetPage<dynamic>> getPages = [
   GetPage(
     name: RoutesManager.languagesScreen,
     page: () => const LanguagesScreen(),
-    transition: Transition.size,
+    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.aboutUsScreen,
     page: () => const AboutUsScreen(),
-    transition: Transition.size,
+    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.privacyPolicyScreen,
     page: () => const PrivacyPolicyScreen(),
-    transition: Transition.size,
+    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.ourAddressScreen,
     page: () => const OurAddressScreen(),
-    transition: Transition.size,
+    transition: Transition.fade,
+  ),
+  // Merchant App
+  GetPage(
+    name: RoutesManager.merchantHomeScreen,
+    page: () => const MerchantHomeScreen(),
+    binding: MerchantHomeBinding(),
   ),
 ];

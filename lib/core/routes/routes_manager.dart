@@ -8,7 +8,7 @@ class RoutesManager {
   static const forgetPasswordScreen = '/forget_password_screen';
   static const resetPasswordScreen = '/reset_password_screen';
   static const verificationScreen = '/verification_screen';
-  // App
+  // Customer App
   static const homeScreen = '/home_screen';
   static const categoriesScreen = '/categories_screen';
   static const offersScreen = '/offer_screen';
@@ -19,6 +19,9 @@ class RoutesManager {
   static const paymentScreen = '/payment_screen';
   static const paymentSuccessScreen = '/payment_success_screen';
   static const storeScreen = '/store_screen';
+  static const notificationsScreen = '/notifications_screen';
+  static const notificationsStatusScreen = '/notification_status_screen';
+  static const notificationsRejectScreen = '/notification_reject_screen';
   // Profile
   static const myProfileScreen = '/my_profile_screen';
   static const editMyProfileScreen = '/edit_my_profile_screen';
@@ -38,4 +41,6 @@ class RoutesManager {
   static const aboutUsScreen = '/about_us_screen';
   static const privacyPolicyScreen = '/privacy_policy_screen';
   static const ourAddressScreen = '/our_address_screen';
+  // Merchant App
+  static const merchantHomeScreen = '/merchant_home_screen';
 }

@@ -90,7 +90,7 @@ class ThemeManager {
         elevation: 0,
         backgroundColor: Colors.transparent,
         selectedLabelStyle:
-            TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700),
+            TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
         // selectedIconTheme: IconThemeData(size: 30.r),
         // unselectedIconTheme: IconThemeData(size: 24.r),
         unselectedLabelStyle: TextStylesManager.subTitle,
