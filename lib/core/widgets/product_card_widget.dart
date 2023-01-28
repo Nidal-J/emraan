@@ -6,19 +6,21 @@ import '../constants/constants_manager.dart';
 class ProductCard extends StatelessWidget {
   const ProductCard({
     Key? key,
-    required this.productName,
+    required this.storeName,
     required this.productDescription,
     required this.originPrice,
     required this.offerPrice,
     required this.imageUrl,
     this.isFavorite = false,
+    this.merchantView = false,
   }) : super(key: key);
-  final String productName;
+  final String storeName;
   final String productDescription;
   final String imageUrl;
   final double originPrice;
   final double offerPrice;
   final bool isFavorite;
+  final bool merchantView;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class ProductCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                productName,
+                storeName,
                 style: TextStyle(
                   fontSize: 10.sp,
                   fontWeight: FontWeight.bold,
@@ -75,61 +77,75 @@ class ProductCard extends StatelessWidget {
                       color: ColorsManager.primary,
                     ),
                   ),
-                  SizedBox(width: 20.w),
-                  Text(
-                    originPrice.toString(),
-                    style: TextStyle(
-                      decoration: TextDecoration.lineThrough,
-                      fontSize: 8.sp,
-                      color: ColorsManager.subtitleColor,
-                    ),
-                  ),
-                  Text(
-                    'ر.س',
-                    style: TextStyle(
-                      fontSize: 6.sp,
-                      color: ColorsManager.subtitleColor,
+                  Visibility(
+                    visible: !merchantView,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SizedBox(width: 20.w),
+                        Text(
+                          originPrice.toString(),
+                          style: TextStyle(
+                            decoration: TextDecoration.lineThrough,
+                            fontSize: 8.sp,
+                            color: ColorsManager.subtitleColor,
+                          ),
+                        ),
+                        Text(
+                          'ر.س',
+                          style: TextStyle(
+                            fontSize: 6.sp,
+                            color: ColorsManager.subtitleColor,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
             ],
           ),
-          Positioned(
-            right: 0,
-            top: 4,
-            child: IconButton(
-              onPressed: () {},
-              alignment: Alignment.topRight,
-              icon: isFavorite
-                  ? Icon(
-                      Icons.favorite,
-                      color: ColorsManager.danger,
-                      size: 18.h,
-                    )
-                  : Icon(
-                      Icons.favorite_border_rounded,
-                      color: ColorsManager.iconsColor,
-                      size: 18.h,
-                    ),
+          Visibility(
+            visible: !merchantView,
+            child: Positioned(
+              right: 0,
+              top: 4,
+              child: IconButton(
+                onPressed: () {},
+                alignment: Alignment.topRight,
+                icon: isFavorite
+                    ? Icon(
+                        Icons.favorite,
+                        color: ColorsManager.danger,
+                        size: 18.h,
+                      )
+                    : Icon(
+                        Icons.favorite_border_rounded,
+                        color: ColorsManager.iconsColor,
+                        size: 18.h,
+                      ),
+              ),
             ),
           ),
-          Positioned(
-            left: 0,
-            bottom: 0,
-            child: InkWell(
-              onTap: () {},
-              child: Container(
-                decoration: BoxDecoration(
-                  color: ColorsManager.primary,
-                  borderRadius:
-                      BorderRadius.only(topRight: Radius.circular(5.r)),
-                ),
-                padding: EdgeInsets.all(10.r),
-                child: Icon(
-                  Icons.add_shopping_cart_rounded,
-                  color: ColorsManager.iconsColor,
-                  size: 15.h,
+          Visibility(
+            visible: !merchantView,
+            child: Positioned(
+              left: 0,
+              bottom: 0,
+              child: InkWell(
+                onTap: () {},
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: ColorsManager.primary,
+                    borderRadius:
+                        BorderRadius.only(topRight: Radius.circular(5.r)),
+                  ),
+                  padding: EdgeInsets.all(10.r),
+                  child: Icon(
+                    Icons.add_shopping_cart_rounded,
+                    color: ColorsManager.iconsColor,
+                    size: 15.h,
+                  ),
                 ),
               ),
             ),

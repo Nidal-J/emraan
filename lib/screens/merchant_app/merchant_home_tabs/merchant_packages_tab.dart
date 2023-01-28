@@ -17,7 +17,7 @@ class MerchantPackagesTab extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ElevatedButton(
-            onPressed: () => Get.toNamed(RoutesManager.addFeedbackScreen),
+            onPressed: () => Get.toNamed(RoutesManager.addPackageScreen),
             style: ElevatedButton.styleFrom(
               fixedSize: Size(Get.width * 0.4, 46.h),
             ),
@@ -99,10 +99,10 @@ class MerchantPackagesTab extends StatelessWidget {
                                   ),
                                   const Spacer(),
                                   InkWell(
-                                    onTap: () => Get.toNamed(
-                                        RoutesManager.orderDetailsScreen),
+                                    onTap: () => Get.toNamed(RoutesManager
+                                        .merchantPackageDetailsScreen),
                                     child: Text(
-                                      'تفاصيل المنتج ',
+                                      'تفاصيل البكج ',
                                       style: TextStyle(
                                         fontSize: 12.sp,
                                       ),

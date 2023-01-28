@@ -1,37 +1,48 @@
-import 'package:emraan/getx/bindings/customer_app/notifications_binding.dart';
-import 'package:emraan/getx/bindings/customer_app/payment_binding.dart';
-import 'package:emraan/getx/bindings/customer_app/products_details_binding.dart';
-import 'package:emraan/getx/bindings/auth/change_password_binding.dart';
-import 'package:emraan/getx/bindings/merchant_app/merchant_home_binding.dart';
-import 'package:emraan/screens/customer_app/cart_screen.dart';
-import 'package:emraan/screens/customer_app/categories_screen.dart';
-import 'package:emraan/screens/customer_app/notification/notification_reject_screen.dart';
-import 'package:emraan/screens/customer_app/notification/notifications_screen.dart';
-import 'package:emraan/screens/customer_app/offers_screen.dart';
-import 'package:emraan/screens/customer_app/order_details_screen.dart';
-import 'package:emraan/screens/customer_app/payment/payment_screen.dart';
-import 'package:emraan/screens/customer_app/payment/payment_success_screen.dart';
-import 'package:emraan/screens/customer_app/product_details_screen.dart';
-import 'package:emraan/screens/customer_app/products_screen.dart';
-import 'package:emraan/screens/customer_app/profile/account_balance/account_balance_screen.dart';
-import 'package:emraan/screens/customer_app/profile/account_balance/add_payment_card_screen.dart';
-import 'package:emraan/screens/customer_app/profile/address_screen.dart';
-import 'package:emraan/screens/customer_app/profile/feedbacks/add_feedback_screen.dart';
-import 'package:emraan/screens/customer_app/profile/feedbacks/feedback_details_screen.dart';
-import 'package:emraan/screens/customer_app/profile/feedbacks/feedbacks_screen.dart';
-import 'package:emraan/screens/customer_app/profile/my_profile/change_password_screen.dart';
-import 'package:emraan/screens/customer_app/profile/my_profile/edit_my_profile_screen.dart';
-import 'package:emraan/screens/customer_app/profile/my_profile/my_profile_screen.dart';
-import 'package:emraan/screens/customer_app/profile/services_evaluations/edit_services_evaluation_screen.dart';
-import 'package:emraan/screens/customer_app/profile/services_evaluations/services_evaluation_screen.dart';
-import 'package:emraan/screens/customer_app/profile/settings/about_us_screen.dart';
-import 'package:emraan/screens/customer_app/profile/settings/languages_screen.dart';
-import 'package:emraan/screens/customer_app/profile/settings/our_address_screen.dart';
-import 'package:emraan/screens/customer_app/profile/settings/privacy_policy_screen.dart';
-import 'package:emraan/screens/customer_app/profile/settings/settings_screen.dart';
-import 'package:emraan/screens/customer_app/profile/wish_list_screen.dart';
-import 'package:emraan/screens/customer_app/store_screen.dart';
-import 'package:emraan/screens/merchant_app/merchant_home_screen.dart';
+import 'package:emraan/screens/merchant_app/merchant_packages/merchant_package_details_screen.dart';
+
+import '../../getx/bindings/customer_app/notifications_binding.dart';
+import '../../getx/bindings/customer_app/payment_binding.dart';
+import '../../getx/bindings/customer_app/products_details_binding.dart';
+import '../../getx/bindings/auth/change_password_binding.dart';
+import '../../getx/bindings/merchant_app/merchant_home_binding.dart';
+import '../../getx/bindings/merchant_app/merchant_offers_binding.dart';
+import '../../getx/bindings/merchant_app/merchant_packages_binding.dart';
+import '../../getx/bindings/merchant_app/merchant_products_binding.dart';
+import '../../screens/customer_app/cart_screen.dart';
+import '../../screens/customer_app/categories_screen.dart';
+import '../../screens/customer_app/notification/notification_reject_screen.dart';
+import '../../screens/customer_app/notification/notifications_screen.dart';
+import '../../screens/customer_app/offers_screen.dart';
+import '../../screens/customer_app/order_details_screen.dart';
+import '../../screens/customer_app/payment/payment_screen.dart';
+import '../../screens/customer_app/payment/payment_success_screen.dart';
+import '../../screens/customer_app/product_details_screen.dart';
+import '../../screens/customer_app/products_screen.dart';
+import '../../screens/customer_app/profile/account_balance/account_balance_screen.dart';
+import '../../screens/customer_app/profile/account_balance/add_payment_card_screen.dart';
+import '../../screens/customer_app/profile/address_screen.dart';
+import '../../screens/customer_app/profile/feedbacks/add_feedback_screen.dart';
+import '../../screens/customer_app/profile/feedbacks/feedback_details_screen.dart';
+import '../../screens/customer_app/profile/feedbacks/feedbacks_screen.dart';
+import '../../screens/customer_app/profile/my_profile/change_password_screen.dart';
+import '../../screens/customer_app/profile/my_profile/edit_my_profile_screen.dart';
+import '../../screens/customer_app/profile/my_profile/my_profile_screen.dart';
+import '../../screens/customer_app/profile/services_evaluations/edit_services_evaluation_screen.dart';
+import '../../screens/customer_app/profile/services_evaluations/services_evaluation_screen.dart';
+import '../../screens/customer_app/profile/settings/about_us_screen.dart';
+import '../../screens/customer_app/profile/settings/languages_screen.dart';
+import '../../screens/customer_app/profile/settings/our_address_screen.dart';
+import '../../screens/customer_app/profile/settings/privacy_policy_screen.dart';
+import '../../screens/customer_app/profile/settings/settings_screen.dart';
+import '../../screens/customer_app/profile/wish_list_screen.dart';
+import '../../screens/customer_app/store_screen.dart';
+import '../../screens/merchant_app/merchant_home_screen.dart';
+import '../../screens/merchant_app/merchant_offers/add_offer_screen.dart';
+import '../../screens/merchant_app/merchant_offers/merchant_offer_details_screen.dart';
+import '../../screens/merchant_app/merchant_order_details_screen.dart';
+import '../../screens/merchant_app/merchant_packages/add_package_screen.dart';
+import '../../screens/merchant_app/merchant_products/add_product_screen.dart';
+import '../../screens/merchant_app/merchant_products/merchant_product_details_screen.dart';
 import 'package:flutter/animation.dart';
 import 'package:get/get.dart';
 import '../../getx/bindings/auth/verification_binding.dart';
@@ -250,5 +261,47 @@ final List<GetPage<dynamic>> getPages = [
     name: RoutesManager.merchantHomeScreen,
     page: () => const MerchantHomeScreen(),
     binding: MerchantHomeBinding(),
+  ),
+  GetPage(
+    name: RoutesManager.merchantOrderDetailsScreen,
+    page: () => const MerchantOrderDetailsScreen(),
+    binding: NotificationsBinding(),
+    transition: Transition.fade,
+  ),
+  GetPage(
+    name: RoutesManager.addProductScreen,
+    page: () => const AddProductScreen(),
+    binding: MerchantProductsBinding(),
+    transition: Transition.fade,
+  ),
+  GetPage(
+    name: RoutesManager.merchantProductDetailsScreen,
+    page: () => const MerchantProductDetailsScreen(),
+    binding: MerchantProductsBinding(),
+    transition: Transition.fade,
+  ),
+  GetPage(
+    name: RoutesManager.addPackageScreen,
+    page: () => const AddPackageScreen(),
+    binding: MerchantPackagesBinding(),
+    transition: Transition.fade,
+  ),
+  GetPage(
+    name: RoutesManager.merchantPackageDetailsScreen,
+    page: () => const MerchantPackageDetailsScreen(),
+    binding: MerchantPackagesBinding(),
+    transition: Transition.fade,
+  ),
+  GetPage(
+    name: RoutesManager.addOfferScreen,
+    page: () => const AddOfferScreen(),
+    binding: MerchantOffersBinding(),
+    transition: Transition.fade,
+  ),
+  GetPage(
+    name: RoutesManager.merchantOfferDetailsScreen,
+    page: () => const MerchantOfferDetailsScreen(),
+    binding: MerchantOffersBinding(),
+    transition: Transition.fade,
   ),
 ];

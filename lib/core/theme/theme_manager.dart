@@ -76,7 +76,6 @@ class ThemeManager {
         style: OutlinedButton.styleFrom(
           fixedSize: Size(Get.width, 50.h),
           foregroundColor: ColorsManager.titleColor,
-          alignment: Alignment.centerRight,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.r),
           ),

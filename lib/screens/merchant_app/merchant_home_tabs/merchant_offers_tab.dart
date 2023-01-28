@@ -17,7 +17,7 @@ class MerchantOffersTab extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ElevatedButton(
-            onPressed: () => Get.toNamed(RoutesManager.addFeedbackScreen),
+            onPressed: () => Get.toNamed(RoutesManager.addOfferScreen),
             style: ElevatedButton.styleFrom(
               fixedSize: Size(Get.width * 0.4, 46.h),
             ),
@@ -63,7 +63,7 @@ class MerchantOffersTab extends StatelessWidget {
                               Row(
                                 children: [
                                   Text(
-                                    '#1225',
+                                    'برميل',
                                     style: TextStyle(
                                       fontSize: 12.sp,
                                       fontWeight: FontWeight.bold,
@@ -131,8 +131,8 @@ class MerchantOffersTab extends StatelessWidget {
                                   ),
                                   const Spacer(),
                                   InkWell(
-                                    onTap: () => Get.toNamed(
-                                        RoutesManager.orderDetailsScreen),
+                                    onTap: () => Get.toNamed(RoutesManager
+                                        .merchantOfferDetailsScreen),
                                     child: Text(
                                       'تفاصيل المنتج ',
                                       style: TextStyle(

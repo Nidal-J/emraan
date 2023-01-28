@@ -7,7 +7,7 @@ class TextFieldWidget extends StatelessWidget {
   const TextFieldWidget({
     Key? key,
     this.controller,
-    required this.label,
+    this.label,
     required this.hintText,
     this.suffixIcon,
     this.prefixIcon,
@@ -27,7 +27,7 @@ class TextFieldWidget extends StatelessWidget {
     this.onEditingComplete,
     this.onSubmitted,
   }) : super(key: key);
-  final String label;
+  final String? label;
   final TextEditingController? controller;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
@@ -53,7 +53,10 @@ class TextFieldWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label),
+        Visibility(
+          visible: label != null,
+          child: Text(label ?? ''),
+        ),
         SizedBox(height: 4.h),
         TextFormField(
           controller: controller,

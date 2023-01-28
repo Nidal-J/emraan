@@ -99,8 +99,8 @@ class MerchantOrdersTab extends StatelessWidget {
                                   ),
                                   const Spacer(),
                                   InkWell(
-                                    onTap: () => Get.toNamed(
-                                        RoutesManager.orderDetailsScreen),
+                                    onTap: () => Get.toNamed(RoutesManager
+                                        .merchantOrderDetailsScreen),
                                     child: Text(
                                       'تفاصيل الطلب ',
                                       style: TextStyle(

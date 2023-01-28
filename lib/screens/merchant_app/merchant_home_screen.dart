@@ -49,8 +49,7 @@ class MerchantHomeScreen extends GetView<MerchantHomeController> {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10.h),
                   child: IconButton(
-                    onPressed: () =>
-                        Get.toNamed(RoutesManager.notificationsScreen),
+                    onPressed: () {},
                     color: ColorsManager.iconsColor,
                     iconSize: 20.r,
                     icon: const Icon(Icons.notification_add_outlined),

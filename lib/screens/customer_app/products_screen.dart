@@ -29,7 +29,7 @@ class ProductsScreen extends StatelessWidget {
             return InkWell(
               onTap: () => Get.toNamed(RoutesManager.productDetailsScreen),
               child: ProductCard(
-                productName: 'اسم المتجر',
+                storeName: 'اسم المتجر',
                 productDescription: 'خزان مياه حجم 2000لتر',
                 originPrice: 500,
                 offerPrice: 300,

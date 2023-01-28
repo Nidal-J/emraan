@@ -43,4 +43,14 @@ class RoutesManager {
   static const ourAddressScreen = '/our_address_screen';
   // Merchant App
   static const merchantHomeScreen = '/merchant_home_screen';
+  static const merchantOrderDetailsScreen = '/merchant_order_details_screen';
+  static const customerEvaluationScreen = '/customer_evaluation_screen';
+  static const addProductScreen = '/add_product_screen';
+  static const merchantProductDetailsScreen =
+      '/merchant_product_detailst_screen';
+  static const addPackageScreen = '/add_package_screen';
+  static const merchantPackageDetailsScreen =
+      '/merchant_package_detailst_screen';
+  static const addOfferScreen = '/add_offer_screen';
+  static const merchantOfferDetailsScreen = '/merchant_offer_detailst_screen';
 }

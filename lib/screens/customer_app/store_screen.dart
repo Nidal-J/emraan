@@ -1,5 +1,3 @@
-import 'package:emraan/core/widgets/profile_card_widget.dart';
-import 'package:emraan/core/widgets/text_field_widget.dart';
 import 'package:emraan/core/widgets/top_right_radius.dart';
 import 'package:emraan/getx/controllers/customer_app/payment_controller.dart';
 import 'package:emraan/screens/customer_app/store_tabs/categories_tab.dart';
@@ -19,45 +17,6 @@ class StoreScreen extends GetView<PaymentController> {
 
   @override
   Widget build(BuildContext context) {
-    // return DefaultTabController(
-    //   length: 3,
-    //   child: Scaffold(
-    //     appBar: AppBar(
-    //       // bottom: TabBar(
-    //       //   tabs: [
-    //       //     Tab(text: 'المنتجات'),
-    //       //     Tab(text: 'المنتجات'),
-    //       //     Tab(text: 'المنتجات'),
-    //       //   ],
-    //       // ),
-    //       title: const Text('Woolha.com Flutter Tutorial'),
-    //       backgroundColor: Colors.teal,
-    //     ),
-    //     body: Column(
-    //       children: [
-    //         TabBar(
-    //           tabs: [
-    //             Tab(text: 'المنتجات'),
-    //             Tab(text: 'المنتجات'),
-    //             Tab(text: 'المنتجات'),
-    //           ],
-    //         ),
-    //         Expanded(
-    //           child: TabBarView(
-    //             physics: BouncingScrollPhysics(),
-    //             dragStartBehavior: DragStartBehavior.down,
-    //             children: [
-    //               Tab(text: 'المنتجات'),
-    //               Tab(text: 'المنتجات'),
-    //               Tab(text: 'المنتجات'),
-    //             ],
-    //           ),
-    //         ),
-    //       ],
-    //     ),
-    //   ),
-    // );
-
     return DefaultTabController(
       length: 4,
       child: Scaffold(

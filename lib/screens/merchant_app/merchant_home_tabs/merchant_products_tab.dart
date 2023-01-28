@@ -17,7 +17,7 @@ class MerchantProductsTab extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ElevatedButton(
-            onPressed: () => Get.toNamed(RoutesManager.addFeedbackScreen),
+            onPressed: () => Get.toNamed(RoutesManager.addProductScreen),
             style: ElevatedButton.styleFrom(
               fixedSize: Size(Get.width * 0.4, 46.h),
             ),
@@ -99,8 +99,8 @@ class MerchantProductsTab extends StatelessWidget {
                                   ),
                                   const Spacer(),
                                   InkWell(
-                                    onTap: () => Get.toNamed(
-                                        RoutesManager.orderDetailsScreen),
+                                    onTap: () => Get.toNamed(RoutesManager
+                                        .merchantProductDetailsScreen),
                                     child: Text(
                                       'تفاصيل المنتج ',
                                       style: TextStyle(

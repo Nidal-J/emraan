@@ -19,7 +19,7 @@ class OffersTab extends StatelessWidget {
       itemCount: 6,
       itemBuilder: (BuildContext context, int index) {
         return ProductCard(
-          productName: 'اسم المتجر',
+          storeName: 'اسم المتجر',
           productDescription: 'خزان مياه حجم 2000لتر',
           originPrice: 500,
           offerPrice: 300,
