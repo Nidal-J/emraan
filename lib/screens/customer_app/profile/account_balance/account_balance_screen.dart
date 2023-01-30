@@ -103,46 +103,46 @@ class _PaymentCard extends GetView<PaymentController> {
 
   @override
   Widget build(BuildContext context) {
-    return ProfileCardWidget(
-      child: Row(
-        children: [
-          SizedBox(
-            width: 60.w,
-            child: image != null
-                ? SvgPicture.asset(
-                    image!,
-                    // 'assets/images/icons/Vector.svg',
-                    // color: ColorsManager.primary,
-                    fit: BoxFit.none,
-                  )
-                : const Icon(Icons.payment_outlined),
-          ),
-          SizedBox(width: 10.w),
-          Expanded(
-            child: Text(
-              holderName,
-              style: TextStyle(
-                fontSize: 12.sp,
+    return InkWell(
+      onTap: () => controller.cardIndex.value = index,
+      child: ProfileCardWidget(
+        child: Row(
+          children: [
+            SizedBox(
+              width: 60.w,
+              child: image != null
+                  ? SvgPicture.asset(
+                      image!,
+                      // 'assets/images/icons/Vector.svg',
+                      // color: ColorsManager.primary,
+                      fit: BoxFit.none,
+                    )
+                  : const Icon(Icons.payment_outlined),
+            ),
+            SizedBox(width: 10.w),
+            Expanded(
+              child: Text(
+                holderName,
+                style: TextStyle(
+                  fontSize: 12.sp,
+                ),
               ),
             ),
-          ),
-          Expanded(
-            child: Text(
-              cardNumber,
-              style: TextStyle(
-                fontSize: 10.sp,
+            Expanded(
+              child: Text(
+                cardNumber,
+                style: TextStyle(
+                  fontSize: 10.sp,
+                ),
               ),
             ),
-          ),
-          Column(
-            children: [
-              InkWell(
-                onTap: () {},
-                child: const Icon(Icons.more_horiz),
-              ),
-              InkWell(
-                onTap: () => controller.cardIndex.value = index,
-                child: Obx(() => CircleAvatar(
+            Column(
+              children: [
+                InkWell(
+                  onTap: () {},
+                  child: const Icon(Icons.more_horiz),
+                ),
+                Obx(() => CircleAvatar(
                       radius: 13.r,
                       backgroundColor: ColorsManager.dividerColor,
                       child: CircleAvatar(
@@ -152,22 +152,22 @@ class _PaymentCard extends GetView<PaymentController> {
                             : ColorsManager.cardColor,
                       ),
                     )),
-              ),
-              Obx(() => Visibility(
-                    visible: controller.cardIndex.value == index,
-                    maintainSize: true,
-                    maintainState: true,
-                    maintainAnimation: true,
-                    child: Text(
-                      'أساسي',
-                      style: TextStyle(
-                        fontSize: 6.sp,
+                Obx(() => Visibility(
+                      visible: controller.cardIndex.value == index,
+                      maintainSize: true,
+                      maintainState: true,
+                      maintainAnimation: true,
+                      child: Text(
+                        'أساسي',
+                        style: TextStyle(
+                          fontSize: 6.sp,
+                        ),
                       ),
-                    ),
-                  )),
-            ],
-          )
-        ],
+                    )),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

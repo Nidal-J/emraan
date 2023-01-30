@@ -1,12 +1,14 @@
 import 'package:emraan/core/constants/images_manager.dart';
 import 'package:emraan/core/widgets/top_right_radius.dart';
+import 'package:emraan/getx/controllers/customer_app/feedback_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import '../../../../core/constants/colors_manager.dart';
 import '../../../../core/widgets/text_field_widget.dart';
 
-class FeedbackDetailsScreen extends StatelessWidget {
+class FeedbackDetailsScreen extends GetView<FeedbackDetailsController> {
   const FeedbackDetailsScreen({super.key});
 
   @override
@@ -33,8 +35,7 @@ class FeedbackDetailsScreen extends StatelessWidget {
                   label: 'التفاصيل',
                   hintText: 'اكتب هنا ...',
                   filled: true,
-                  minLines: 5,
-                  maxLines: 5,
+                  multiLines: true,
                   readOnly: true,
                 ),
                 SizedBox(height: 10.h),

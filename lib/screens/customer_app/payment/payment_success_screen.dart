@@ -1,5 +1,6 @@
 import 'package:emraan/core/routes/routes_manager.dart';
 import 'package:emraan/core/widgets/top_right_radius.dart';
+import 'package:emraan/getx/controllers/customer_app/home_controller.dart';
 import 'package:emraan/getx/controllers/customer_app/payment_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -45,6 +46,7 @@ class PaymentSuccessScreen extends GetView<PaymentController> {
               const Spacer(),
               ElevatedButton(
                 onPressed: () {
+                  HomeController().pageIndex(0);
                   Get.offAllNamed(RoutesManager.homeScreen);
                 },
                 child: const Text('العودة للرئيسية'),

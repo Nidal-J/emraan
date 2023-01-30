@@ -2,6 +2,7 @@ import 'package:emraan/core/constants/colors_manager.dart';
 import 'package:emraan/core/routes/routes_manager.dart';
 import 'package:emraan/core/widgets/profile_card_widget.dart';
 import 'package:emraan/core/widgets/top_right_radius.dart';
+import 'package:emraan/getx/controllers/customer_app/add_feedback_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';

@@ -9,14 +9,14 @@ import 'package:get/get.dart';
 import '../../../../core/constants/colors_manager.dart';
 import '../../../../core/constants/constants_manager.dart';
 
-class EditServicesEvaluationScreen extends StatelessWidget {
-  const EditServicesEvaluationScreen({super.key});
+class CustomerEvaluationScreen extends StatelessWidget {
+  const CustomerEvaluationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('تقييم الخدمات'),
+        title: const Text('#0022'),
       ),
       body: TopRightRadius(
         child: ListView(
@@ -35,7 +35,7 @@ class EditServicesEvaluationScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text(
-                    'تقييم التاجر',
+                    'تقييم الزبون',
                     style: TextStylesManager.title,
                   ),
                   RatingBar(
@@ -74,10 +74,10 @@ class EditServicesEvaluationScreen extends StatelessWidget {
             ),
             SizedBox(height: 8.h),
             const TextFieldWidget(
-              label: 'اكتب تقييم للتاجر',
+              label: 'اكتب تقييم للزبون',
               hintText: 'اكتب هنا ...',
-              filled: true,
               multiLines: true,
+              isValidated: false,
             ),
             SizedBox(height: 30.h),
             Row(
@@ -85,9 +85,9 @@ class EditServicesEvaluationScreen extends StatelessWidget {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {
-                      _performEditEvaluating();
+                      _performEvaluateCustomer();
                     },
-                    child: const Text('تعديل'),
+                    child: const Text('تأكيد'),
                   ),
                 ),
                 SizedBox(width: 16.w),
@@ -112,8 +112,8 @@ class EditServicesEvaluationScreen extends StatelessWidget {
     );
   }
 
-  void _performEditEvaluating() {
+  void _performEvaluateCustomer() {
     Get.back();
-    showSnackbar(message: 'تم تعديل التقييم بنجاح');
+    showSnackbar(message: 'تم تقييم الزبون بنجاح');
   }
 }

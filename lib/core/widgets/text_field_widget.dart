@@ -21,11 +21,14 @@ class TextFieldWidget extends StatelessWidget {
     this.fullColored = false,
     this.filled = false,
     this.isValidated = true,
+    this.multiLines = false,
     this.maxLines = 1,
     this.minLines = 1,
+    this.maxLength,
     this.onChange,
     this.onEditingComplete,
     this.onSubmitted,
+    this.onTap,
   }) : super(key: key);
   final String? label;
   final TextEditingController? controller;
@@ -42,11 +45,14 @@ class TextFieldWidget extends StatelessWidget {
   final bool fullColored;
   final bool filled;
   final bool isValidated;
+  final bool multiLines;
   final int maxLines;
   final int minLines;
+  final int? maxLength;
   final Function(String)? onChange;
   final Function()? onEditingComplete;
   final Function(String)? onSubmitted;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -63,34 +69,38 @@ class TextFieldWidget extends StatelessWidget {
           autovalidateMode: AutovalidateMode.onUserInteraction,
           validator: (value) {
             if ((value == null || value.trim().isEmpty) && isValidated) {
-              return 'هذا الحقل مطلوب';
+              return 'هذا الحقل مطلوب *';
             } else if (isPassword && value!.length < 8) {
-              return 'كلمة المرور يجب ألا تقل عن 8 رموز';
+              return 'كلمة المرور يجب ألا تقل عن 8 رموز *';
+            } else if (isEmail &&
+                !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                    .hasMatch(value!)) {
+              return 'تأكد من إدخال إيميل صالح *';
+            } else if (isPhone && value!.length < 8) {
+              return 'تأكد من إدخال رقم جوال صالح *';
             }
-            // TODO
-            // else if (isEmail && value.length < 6) {
-            //   return 'password_condition';
-            // }
-            // else if (isPhone && value.length < 6) {
-            //   return 'password_condition';
-            // }
             return null;
           },
           readOnly: readOnly,
-          textInputAction: textInputAction,
+          textInputAction:
+              multiLines ? TextInputAction.newline : textInputAction,
           keyboardType: isPhone
               ? TextInputType.phone
               : isEmail
                   ? TextInputType.emailAddress
-                  : keyboardType,
+                  : multiLines
+                      ? TextInputType.multiline
+                      : keyboardType,
           obscureText: obscureText,
-          // obscuringCharacter: '*',
-          maxLines: maxLines,
-          minLines: minLines,
+          maxLines: multiLines ? 5 : maxLines,
+          minLines: multiLines ? 5 : minLines,
           onChanged: onChange,
           onFieldSubmitted: onSubmitted,
+          onTap: onTap,
           textAlignVertical: TextAlignVertical.center,
+          maxLength: maxLength,
           decoration: InputDecoration(
+            counterText: '',
             filled: filled,
             fillColor: ColorsManager.profileColor,
             contentPadding:

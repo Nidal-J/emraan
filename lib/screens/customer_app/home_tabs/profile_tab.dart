@@ -2,10 +2,13 @@ import 'dart:developer';
 import 'package:emraan/core/constants/colors_manager.dart';
 import 'package:emraan/core/constants/images_manager.dart';
 import 'package:emraan/core/routes/routes_manager.dart';
+import 'package:emraan/core/utils/show_logout_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import '../../../core/utils/show_snackbar.dart';
+import '../../../getx/controllers/customer_app/home_controller.dart';
 
 class ProfileTab extends StatelessWidget {
   const ProfileTab({super.key});
@@ -33,7 +36,7 @@ class ProfileTab extends StatelessWidget {
     () => log('message'),
     () => log('message'),
     () => log('message'),
-    () => Get.offAllNamed(RoutesManager.loginScreen),
+    // () => ,
   ];
 
   @override
@@ -64,24 +67,26 @@ class ProfileTab extends StatelessWidget {
         Column(
           children: List.generate(
             10,
-            (index) => Container(
-              padding: EdgeInsets.fromLTRB(12.r, 12.r, 26.r, 12.r),
-              margin: EdgeInsets.only(bottom: 6.h),
-              decoration: BoxDecoration(
-                color: ColorsManager.profileColor,
-                borderRadius: BorderRadius.circular(5.r),
-              ),
-              child: Row(
-                children: [
-                  SvgPicture.asset(
-                    ImagesManager.profileIcons[index],
-                  ),
-                  SizedBox(width: 32.w),
-                  Text(_listTitles[index]),
-                  const Spacer(),
-                  InkWell(
-                    onTap: _listActions[index],
-                    child: index > 5 && index < 9
+            (index) => InkWell(
+              onTap: index == 9
+                  ? () => _performLogout(context)
+                  : _listActions[index],
+              child: Container(
+                padding: EdgeInsets.fromLTRB(12.r, 12.r, 26.r, 12.r),
+                margin: EdgeInsets.only(bottom: 6.h),
+                decoration: BoxDecoration(
+                  color: ColorsManager.profileColor,
+                  borderRadius: BorderRadius.circular(5.r),
+                ),
+                child: Row(
+                  children: [
+                    SvgPicture.asset(
+                      ImagesManager.profileIcons[index],
+                    ),
+                    SizedBox(width: 32.w),
+                    Text(_listTitles[index]),
+                    const Spacer(),
+                    index > 5 && index < 9
                         ? SvgPicture.asset(
                             ImagesManager.abroad,
                           )
@@ -89,13 +94,30 @@ class ProfileTab extends StatelessWidget {
                             Icons.arrow_back_ios_new_rounded,
                             size: 20.r,
                           ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
         ),
       ],
+    );
+  }
+
+  _performLogout(BuildContext context) {
+    showLogoutDialog(
+      message: 'أنت على وشك تسجيل الخروج! هل تريد الإستمرار؟',
+      context: context,
+      onConfirm: () async {
+        Get.back();
+        HomeController().isLoading(true);
+        // TODO: Replace with API request
+        await Future.delayed(const Duration(seconds: 1));
+        Get.offAllNamed(RoutesManager.loginScreen);
+        HomeController().isLoading(false);
+        HomeController().pageIndex(0);
+        showSnackbar(message: 'تم تسجيل الخروج بنجاح');
+      },
     );
   }
 }

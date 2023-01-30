@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../core/constants/colors_manager.dart';
 import '../../core/constants/constants_manager.dart';
+import '../../core/routes/routes_manager.dart';
+import '../../core/utils/show_snackbar.dart';
 import '../../core/widgets/loading_widget.dart';
 import '../../core/widgets/text_field_widget.dart';
 import '../../core/widgets/top_right_radius.dart';
@@ -87,10 +89,9 @@ class RegisterScreen extends GetView<RegisterController> {
                   ),
                   SizedBox(height: 28.h),
                   ElevatedButton(
-                    onPressed: () async {
+                    onPressed: () {
                       if (controller.formKey.currentState!.validate()) {
-                        controller.isLoading(true);
-                        await _performRegister();
+                        _performRegister();
                       }
                     },
                     child: const Text('تسجيل مستخدم'),
@@ -121,9 +122,12 @@ class RegisterScreen extends GetView<RegisterController> {
                   ),
                   SizedBox(height: 14.h),
                   OutlinedButton.icon(
-                    onPressed: () async {
-                      await _performLoginWithApple();
+                    onPressed: () {
+                      _performLoginWithApple();
                     },
+                    style: OutlinedButton.styleFrom(
+                      alignment: Alignment.centerRight,
+                    ),
                     icon: Padding(
                       padding: EdgeInsets.only(left: 12.w),
                       child: Image.asset(
@@ -140,9 +144,12 @@ class RegisterScreen extends GetView<RegisterController> {
                   ),
                   SizedBox(height: 10.h),
                   OutlinedButton.icon(
-                    onPressed: () async {
-                      await _performLoginWithGoogle();
+                    onPressed: () {
+                      _performLoginWithGoogle();
                     },
+                    style: OutlinedButton.styleFrom(
+                      alignment: Alignment.centerRight,
+                    ),
                     icon: Padding(
                       padding: EdgeInsets.only(left: 12.w),
                       child: Image.asset(
@@ -172,7 +179,16 @@ class RegisterScreen extends GetView<RegisterController> {
     );
   }
 
-  Future<void> _performRegister() async {}
-  Future<void> _performLoginWithGoogle() async {}
-  Future<void> _performLoginWithApple() async {}
+  void _performRegister() async {
+    controller.isLoading(true);
+    // TODO: Replace with api request
+    await Future.delayed(const Duration(seconds: 1)).then((value) {
+      controller.isLoading(false);
+      Get.offAllNamed(RoutesManager.homeScreen);
+      showSnackbar(message: 'تم إنشاء الحساب بنجاح');
+    });
+  }
+
+  void _performLoginWithGoogle() async {}
+  void _performLoginWithApple() async {}
 }

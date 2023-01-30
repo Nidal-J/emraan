@@ -235,7 +235,6 @@ class VerificationScreen extends GetView<VerificationController> {
     await Future.delayed(const Duration(milliseconds: 500))
         .then((value) => Get.toNamed(RoutesManager.verificationScreen));
     Get.toNamed(RoutesManager.resetPasswordScreen);
-
     controller.isLoading(false);
   }
 }

@@ -1,3 +1,4 @@
+import 'package:emraan/core/utils/show_snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -85,7 +86,14 @@ class ResetPasswordScreen extends GetView<ResetPasswordController> {
                     ElevatedButton(
                       onPressed: () async {
                         if (controller.formKey.currentState!.validate()) {
-                          await _performResetPassword();
+                          if (controller.newPasswordController.text.trim() ==
+                              controller.confirmNewPasswordController.text
+                                  .trim()) {
+                            await _performResetPassword();
+                          }
+                          showSnackbar(
+                              message: 'كلمتا المرور غير متطابقتين',
+                              success: false);
                         }
                       },
                       child: const Text('تأكيد'),
@@ -109,8 +117,10 @@ class ResetPasswordScreen extends GetView<ResetPasswordController> {
   Future<void> _performResetPassword() async {
     controller.isLoading(true);
     // TODO: Replace with api request
-    await Future.delayed(const Duration(milliseconds: 500))
-        .then((value) => Get.offAllNamed(RoutesManager.homeScreen));
+    await Future.delayed(const Duration(milliseconds: 500)).then((value) {
+      Get.offAllNamed(RoutesManager.homeScreen);
+      showSnackbar(message: 'تم إعادة ضبط كلمة المرور بنجاح');
+    });
     controller.isLoading(false);
   }
 }

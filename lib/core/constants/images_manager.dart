@@ -27,6 +27,7 @@ class ImagesManager {
 
   static const String iconsPath = 'assets/images/icons';
   static const String logo = '$iconsPath/logo.png';
+  static const String logo2 = '$iconsPath/logo2.png';
   static const String google = '$iconsPath/google.png';
   static const String apple = '$iconsPath/apple.png';
   static const String resend = '$iconsPath/resend.svg';

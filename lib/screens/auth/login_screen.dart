@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:emraan/core/utils/show_snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -36,6 +39,12 @@ class LoginScreen extends GetView<LoginController> {
                     label: 'الإيميل',
                     hintText: 'example@example.com',
                     controller: controller.emailController,
+                    onChange: (value) {
+                      bool x = RegExp(
+                              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                          .hasMatch(value);
+                      log(x.toString());
+                    },
                     isEmail: true,
                   ),
                   SizedBox(height: 10.h),
@@ -69,9 +78,10 @@ class LoginScreen extends GetView<LoginController> {
                   ),
                   SizedBox(height: 28.h),
                   ElevatedButton(
-                    onPressed: () async {
+                    onPressed: () {
                       if (controller.formKey.currentState!.validate()) {
-                        await _performLoginWithEmail();
+                        log('true');
+                        _performLoginWithEmail();
                       }
                     },
                     child: const Text('تسجيل دخول'),
@@ -111,9 +121,12 @@ class LoginScreen extends GetView<LoginController> {
                   ),
                   SizedBox(height: 14.h),
                   OutlinedButton.icon(
-                    onPressed: () async {
-                      await _performLoginWithApple();
+                    onPressed: () {
+                      _performLoginWithApple();
                     },
+                    style: OutlinedButton.styleFrom(
+                      alignment: Alignment.centerRight,
+                    ),
                     icon: Padding(
                       padding: EdgeInsets.only(left: 12.w),
                       child: Image.asset(
@@ -130,9 +143,12 @@ class LoginScreen extends GetView<LoginController> {
                   ),
                   SizedBox(height: 10.h),
                   OutlinedButton.icon(
-                    onPressed: () async {
-                      await _performLoginWithGoogle();
+                    onPressed: () {
+                      _performLoginWithGoogle();
                     },
+                    style: OutlinedButton.styleFrom(
+                      alignment: Alignment.centerRight,
+                    ),
                     icon: Padding(
                       padding: EdgeInsets.only(left: 12.w),
                       child: Image.asset(
@@ -208,16 +224,16 @@ class LoginScreen extends GetView<LoginController> {
     );
   }
 
-  Future<void> _performLoginWithEmail() async {
+  void _performLoginWithEmail() async {
     controller.isLoading(true);
     // TODO: Replace with api request
-    await Future.delayed(const Duration(seconds: 2)).then((value) {
+    await Future.delayed(const Duration(seconds: 1)).then((value) {
       controller.isLoading(false);
-      Get.offAll(RoutesManager.homeScreen);
+      Get.offAllNamed(RoutesManager.homeScreen);
+      showSnackbar(message: 'تم تسجيل الدخول بنجاح');
     });
-    controller.isLoading(true);
   }
 
-  Future<void> _performLoginWithGoogle() async {}
-  Future<void> _performLoginWithApple() async {}
+  void _performLoginWithGoogle() async {}
+  void _performLoginWithApple() async {}
 }

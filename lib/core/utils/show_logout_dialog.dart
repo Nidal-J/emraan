@@ -5,19 +5,21 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../core/constants/colors_manager.dart';
 
-void viewLogoutDialog(
+void showLogoutDialog(
     {required String message,
     String? content,
     void Function()? onConfirm,
     required BuildContext context}) {
   showDialog(
       context: context,
-      barrierColor: Colors.black.withOpacity(0.8),
+      barrierColor: Colors.black.withOpacity(0.6),
       builder: (context) {
         if (Platform.isAndroid) {
           return AlertDialog(
-            backgroundColor: ColorsManager.scaffoldBg,
-            contentPadding: const EdgeInsets.fromLTRB(24, 0, 20, 20),
+            backgroundColor: ColorsManager.white,
+            titlePadding: EdgeInsets.fromLTRB(60.w, 40.h, 30.w, 10),
+            actionsPadding: EdgeInsets.fromLTRB(20.w, 0.h, 30.w, 10),
+            contentPadding: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.r)),
             title: Column(
@@ -27,24 +29,23 @@ void viewLogoutDialog(
                 Text(message),
                 Divider(
                   thickness: 1,
-                  // indent: 100.w,
-                  endIndent: 140.w,
-                  height: 50.h,
+                  color: ColorsManager.dividerColor,
+                  endIndent: 70.w,
+                  height: 20.h,
                 ),
               ],
             ),
             content: Text(content ?? ''),
             actions: [
-              // SizedBox(width: 80.w),
               TextButton(
                 onPressed: () {
                   Get.back();
                 },
                 child: Text(
-                  'Cancel',
+                  'إلغاء',
                   style: TextStyle(
                     color: ColorsManager.success,
-                    fontSize: 32.sp,
+                    fontSize: 16.sp,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -52,11 +53,10 @@ void viewLogoutDialog(
               TextButton(
                 onPressed: onConfirm,
                 child: Text(
-                  'Logout',
+                  'تسجيل الخروج',
                   style: TextStyle(
                     color: ColorsManager.danger,
-                    fontSize: 32.sp,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 16.sp,
                   ),
                 ),
               ),
@@ -72,10 +72,11 @@ void viewLogoutDialog(
                   Get.back();
                 },
                 child: Text(
-                  'Logout',
+                  'تسجيل الخروج',
+                  textAlign: TextAlign.start,
                   style: TextStyle(
                     color: ColorsManager.danger,
-                    fontSize: 32.sp,
+                    fontSize: 16.sp,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -83,10 +84,11 @@ void viewLogoutDialog(
               TextButton(
                 onPressed: onConfirm,
                 child: Text(
-                  'Yes',
+                  'إلغاء',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: ColorsManager.success,
-                    fontSize: 32.sp,
+                    fontSize: 16.sp,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

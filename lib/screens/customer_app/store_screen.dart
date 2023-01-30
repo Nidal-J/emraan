@@ -1,3 +1,4 @@
+import 'package:emraan/core/widgets/category_card_widget.dart';
 import 'package:emraan/core/widgets/top_right_radius.dart';
 import 'package:emraan/getx/controllers/customer_app/payment_controller.dart';
 import 'package:emraan/screens/customer_app/store_tabs/categories_tab.dart';
@@ -26,7 +27,7 @@ class StoreScreen extends GetView<PaymentController> {
         ),
         body: TopRightRadius(
           child: Padding(
-            padding: EdgeInsets.only(top: 44.h, bottom: 24.h),
+            padding: EdgeInsets.only(top: 44.h),
             child: Column(
               children: [
                 Row(
@@ -101,7 +102,7 @@ class StoreScreen extends GetView<PaymentController> {
                   margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.r),
-                    boxShadow: ConstantsManager.testBoxShadow1,
+                    boxShadow: ConstantsManager.customBoxShadow20,
                   ),
                   child: TextField(
                     onChanged: (value) {},

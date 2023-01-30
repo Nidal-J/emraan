@@ -145,7 +145,9 @@ class _OrderStatus extends GetView<MerchantOrdersController> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        controller.pageIndex(index);
+        if (index != -1) {
+          controller.pageIndex(index);
+        }
       },
       child: Obx(
         () => AnimatedContainer(

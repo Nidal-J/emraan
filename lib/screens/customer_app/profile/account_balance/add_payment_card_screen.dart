@@ -31,15 +31,22 @@ class AddPaymentCardScreen extends GetView<PaymentController> {
                 label: 'رقم البطاقة',
                 hintText: '0000000000000000',
                 controller: controller.cardNumberController,
+                keyboardType: const TextInputType.numberWithOptions(),
+                maxLength: 20,
               ),
               SizedBox(height: 10.h),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Expanded(
+                  Expanded(
                     child: TextFieldWidget(
                       label: 'تاريخ الانتهاء',
                       hintText: '00/00/0000',
+                      readOnly: true,
+                      controller: controller.expDateController,
+                      onTap: () async {
+                        _performPickDate(context);
+                      },
                     ),
                   ),
                   SizedBox(width: 20.w),
@@ -50,6 +57,8 @@ class AddPaymentCardScreen extends GetView<PaymentController> {
                         label: 'CVV',
                         hintText: '000',
                         controller: controller.cvvController,
+                        keyboardType: const TextInputType.numberWithOptions(),
+                        maxLength: 3,
                       ),
                     ),
                   ),
@@ -71,8 +80,28 @@ class AddPaymentCardScreen extends GetView<PaymentController> {
     );
   }
 
-  void _performAddNewCard() async {
+  _performAddNewCard() async {
     Get.back();
     showSnackbar(message: 'تم إضافة البطاقة بنجاح');
+  }
+
+  Future<bool> _performPickDate(BuildContext context) async {
+    bool isSelected = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime.now(),
+      lastDate: DateTime(2050),
+      keyboardType: TextInputType.datetime,
+    ).then((value) {
+      value != null ? controller.expDate(value) : null;
+      return value != null;
+    }).catchError((e) => false);
+
+    if (isSelected) {
+      controller.expDateController.text =
+          '${controller.expDate.value.day}/${controller.expDate.value.month}/${controller.expDate.value.year}';
+    }
+
+    return isSelected;
   }
 }

@@ -2,6 +2,7 @@ import 'package:emraan/core/routes/routes_manager.dart';
 import 'package:emraan/core/widgets/profile_card_widget.dart';
 import 'package:emraan/core/widgets/top_right_radius.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../../../core/constants/colors_manager.dart';
@@ -35,20 +36,43 @@ class ServicesEvaluationScreen extends StatelessWidget {
                       fontSize: 12.sp,
                     ),
                   ),
-                  Row(
-                    children: List.generate(
-                      5,
-                      (index) => index < 3
-                          ? const Icon(
-                              Icons.star_rounded,
-                              color: ColorsManager.warning,
-                            )
-                          : const Icon(
-                              Icons.star_outline_rounded,
-                              color: ColorsManager.subtitleColor,
-                            ),
-                    ),
+                  Column(
+                    children: [
+                      RatingBar(
+                        itemSize: 28.r,
+                        minRating: 1,
+                        wrapAlignment: WrapAlignment.center,
+                        initialRating: 2.0 + index,
+                        ratingWidget: RatingWidget(
+                          full: const Icon(
+                            Icons.star_rate_rounded,
+                            color: ColorsManager.warning,
+                          ),
+                          half: const Icon(Icons.star_rate_rounded),
+                          empty: const Icon(
+                            Icons.star_border_rounded,
+                            color: ColorsManager.subtitleColor,
+                          ),
+                        ),
+                        ignoreGestures: true,
+                        onRatingUpdate: (double value) {},
+                      ),
+                    ],
                   ),
+                  // Row(
+                  //   children: List.generate(
+                  //     5,
+                  //     (index) => index < 3
+                  //         ? const Icon(
+                  //             Icons.star_rounded,
+                  //             color: ColorsManager.warning,
+                  //           )
+                  //         : const Icon(
+                  //             Icons.star_outline_rounded,
+                  //             color: ColorsManager.subtitleColor,
+                  //           ),
+                  //   ),
+                  // ),
                   IconButton(
                     padding: EdgeInsets.zero,
                     alignment: Alignment.centerLeft,

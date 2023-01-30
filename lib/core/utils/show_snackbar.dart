@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import '../../core/constants/colors_manager.dart';
 
@@ -13,6 +14,7 @@ void showSnackbar({
       backgroundColor: success ? ColorsManager.success : ColorsManager.danger,
       message: message,
       duration: Duration(seconds: duration),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
     ),
   );
 }

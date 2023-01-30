@@ -1,4 +1,5 @@
 import 'package:emraan/core/constants/text_styles_manager.dart';
+import 'package:emraan/core/routes/routes_manager.dart';
 import 'package:emraan/core/utils/show_custom_dialog.dart';
 import 'package:emraan/core/utils/show_snackbar.dart';
 import 'package:emraan/core/widgets/text_field_widget.dart';
@@ -146,27 +147,53 @@ class MerchantOrderDetailsScreen extends GetView<MerchantOrdersController> {
           color: ColorsManager.white,
           boxShadow: ConstantsManager.customBoxShadow10,
         ),
-        child: Row(
-          children: [
-            Expanded(
-              child: ElevatedButton(
-                onPressed: () {
-                  _performAcceptOrder(context);
-                },
-                child: const Text('قبول الطلب'),
+        child: Obx(
+          () => Row(
+            children: [
+              Expanded(
+                child: controller.isAccepted.value
+                    ? Container(
+                        height: 52.h,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            color: ColorsManager.danger.withOpacity(0.3),
+                            borderRadius: BorderRadius.circular(10.r)),
+                        child: const Text('بانتظار السائق'),
+                      )
+                    : ElevatedButton(
+                        onPressed: () {
+                          _performAcceptOrder(context);
+                        },
+                        child: const Text('قبول الطلب'),
+                      ),
               ),
-            ),
-            SizedBox(width: 12.w),
-            Expanded(
-              child: OutlinedButton(
-                onPressed: () {
-                  _performRejectOrder(context);
-                },
-                style: OutlinedButton.styleFrom(alignment: Alignment.center),
-                child: const Text('رفض الطلب'),
+              SizedBox(width: 12.w),
+              Expanded(
+                // flex: controller.isAccepted.value ? 9 : 1,
+                child: controller.isAccepted.value
+                    ? OutlinedButton(
+                        onPressed: () {
+                          _performRateCustomer();
+                        },
+                        style: OutlinedButton.styleFrom(
+                            side: const BorderSide(
+                                color: ColorsManager.subtitleColor)),
+                        child: Text(
+                          'انتقل الى المرحلة التالية',
+                          style: TextStyle(fontSize: 12.sp),
+                        ),
+                      )
+                    : OutlinedButton(
+                        onPressed: () {
+                          _performRejectOrder(context);
+                        },
+                        style: OutlinedButton.styleFrom(
+                            alignment: Alignment.center),
+                        child: const Text('رفض الطلب'),
+                      ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -193,6 +220,7 @@ class MerchantOrderDetailsScreen extends GetView<MerchantOrdersController> {
       ),
       onConfirm: () {
         Get.back();
+        controller.isAccepted(true);
         showSnackbar(message: 'تم تأكيد الطلب بنجاح');
       },
       hasBackButton: false,
@@ -439,6 +467,10 @@ class MerchantOrderDetailsScreen extends GetView<MerchantOrdersController> {
       },
       backText: 'رجوع',
     );
+  }
+
+  _performRateCustomer() {
+    Get.toNamed(RoutesManager.customerEvaluationScreen);
   }
 }
 

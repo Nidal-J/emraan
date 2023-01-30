@@ -31,7 +31,7 @@ class ProductCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: ColorsManager.white,
         borderRadius: BorderRadius.circular(20.r),
-        boxShadow: ConstantsManager.testBoxShadow1,
+        boxShadow: ConstantsManager.customBoxShadow20,
       ),
       child: Stack(
         children: [

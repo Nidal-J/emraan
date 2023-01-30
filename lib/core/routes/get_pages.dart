@@ -1,3 +1,6 @@
+import 'package:emraan/getx/bindings/customer_app/edit_profile_binding.dart';
+import 'package:emraan/getx/bindings/customer_app/feedback_binding.dart';
+import 'package:emraan/screens/merchant_app/customer_evaluation_screen.dart';
 import 'package:emraan/screens/merchant_app/merchant_packages/merchant_package_details_screen.dart';
 
 import '../../getx/bindings/customer_app/notifications_binding.dart';
@@ -70,32 +73,27 @@ final List<GetPage<dynamic>> getPages = [
   GetPage(
     name: RoutesManager.loginScreen,
     page: () => const LoginScreen(),
-    transition: Transition.upToDown,
     binding: LoginBinding(),
   ),
   GetPage(
     name: RoutesManager.registerScreen,
     page: () => const RegisterScreen(),
-    transition: Transition.downToUp,
     binding: RegisterBinding(),
   ),
   GetPage(
     name: RoutesManager.forgetPasswordScreen,
     page: () => const ForgetPasswordScreen(),
     binding: ForgetPasswordBinding(),
-    transition: Transition.cupertino,
   ),
   GetPage(
     name: RoutesManager.resetPasswordScreen,
     page: () => const ResetPasswordScreen(),
     binding: ResetPasswordBinding(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.verificationScreen,
     page: () => const VerificationScreen(),
     binding: VerificationBinding(),
-    transition: Transition.fade,
   ),
   // App
   GetPage(
@@ -106,65 +104,53 @@ final List<GetPage<dynamic>> getPages = [
   GetPage(
     name: RoutesManager.offersScreen,
     page: () => const OffersScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.categoriesScreen,
     page: () => const CategoriesScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.productsScreen,
     page: () => const ProductsScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.productDetailsScreen,
     page: () => const ProductDetailsScreen(),
     binding: ProductDetailsBinding(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.orderDetailsScreen,
     page: () => const OrderDetailsScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.cartScreen,
     page: () => const CartScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.paymentScreen,
     page: () => const PaymentScreen(),
     binding: PaymentBinding(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.paymentSuccessScreen,
     page: () => const PaymentSuccessScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.storeScreen,
     page: () => const StoreScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.notificationsScreen,
     page: () => const NotificationsScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.notificationsStatusScreen,
     page: () => const NotificationStatusScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.notificationsRejectScreen,
     page: () => const NotificationRejectScreen(),
     binding: NotificationsBinding(),
-    transition: Transition.fade,
   ),
   // Profile
   GetPage(
@@ -175,6 +161,7 @@ final List<GetPage<dynamic>> getPages = [
   GetPage(
     name: RoutesManager.editMyProfileScreen,
     page: () => const EditMyProfileScreen(),
+    binding: EditProfileBinding(),
     transition: Transition.zoom,
   ),
   GetPage(
@@ -194,7 +181,6 @@ final List<GetPage<dynamic>> getPages = [
     name: RoutesManager.addPaymentCardScreen,
     page: () => const AddPaymentCardScreen(),
     binding: PaymentBinding(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.addressScreen,
@@ -209,7 +195,6 @@ final List<GetPage<dynamic>> getPages = [
   GetPage(
     name: RoutesManager.editServicesEvaluationScreen,
     page: () => const EditServicesEvaluationScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.feedbacksScreen,
@@ -219,12 +204,12 @@ final List<GetPage<dynamic>> getPages = [
   GetPage(
     name: RoutesManager.feedbackDetailsScreen,
     page: () => const FeedbackDetailsScreen(),
-    transition: Transition.fade,
+    binding: FeedbackBinding(),
   ),
   GetPage(
     name: RoutesManager.addFeedbackScreen,
     page: () => const AddFeedbackScreen(),
-    transition: Transition.fade,
+    binding: FeedbackBinding(),
   ),
   GetPage(
     name: RoutesManager.wishListScreen,
@@ -239,22 +224,18 @@ final List<GetPage<dynamic>> getPages = [
   GetPage(
     name: RoutesManager.languagesScreen,
     page: () => const LanguagesScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.aboutUsScreen,
     page: () => const AboutUsScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.privacyPolicyScreen,
     page: () => const PrivacyPolicyScreen(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.ourAddressScreen,
     page: () => const OurAddressScreen(),
-    transition: Transition.fade,
   ),
   // Merchant App
   GetPage(
@@ -266,42 +247,39 @@ final List<GetPage<dynamic>> getPages = [
     name: RoutesManager.merchantOrderDetailsScreen,
     page: () => const MerchantOrderDetailsScreen(),
     binding: NotificationsBinding(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.addProductScreen,
     page: () => const AddProductScreen(),
     binding: MerchantProductsBinding(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.merchantProductDetailsScreen,
     page: () => const MerchantProductDetailsScreen(),
     binding: MerchantProductsBinding(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.addPackageScreen,
     page: () => const AddPackageScreen(),
     binding: MerchantPackagesBinding(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.merchantPackageDetailsScreen,
     page: () => const MerchantPackageDetailsScreen(),
     binding: MerchantPackagesBinding(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.addOfferScreen,
     page: () => const AddOfferScreen(),
     binding: MerchantOffersBinding(),
-    transition: Transition.fade,
   ),
   GetPage(
     name: RoutesManager.merchantOfferDetailsScreen,
     page: () => const MerchantOfferDetailsScreen(),
     binding: MerchantOffersBinding(),
-    transition: Transition.fade,
+  ),
+  GetPage(
+    name: RoutesManager.customerEvaluationScreen,
+    page: () => const CustomerEvaluationScreen(),
   ),
 ];

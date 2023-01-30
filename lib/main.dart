@@ -47,6 +47,7 @@ class MyApp extends StatelessWidget {
           },
           initialRoute: RoutesManager.welcomeScreen,
           getPages: getPages,
+          defaultTransition: Transition.fade,
           unknownRoute: GetPage(
             name: RoutesManager.unknownScreen,
             page: () => const UnknownScreen(),

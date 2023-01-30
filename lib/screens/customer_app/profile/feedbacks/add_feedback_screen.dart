@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../../../core/constants/colors_manager.dart';
+import '../../../../getx/controllers/customer_app/add_feedback_controller.dart';
 
-class AddFeedbackScreen extends StatelessWidget {
+class AddFeedbackScreen extends GetView<AddFeedbackController> {
   const AddFeedbackScreen({super.key});
 
   @override
@@ -16,45 +17,55 @@ class AddFeedbackScreen extends StatelessWidget {
         title: const Text('إضافة ملاحظة'),
       ),
       body: TopRightRadius(
-        child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 44.h),
-          physics: const BouncingScrollPhysics(),
-          children: [
-            const TextFieldWidget(
-              label: 'اسم الملاحظة',
-              hintText: 'اسم الملاحظة',
-            ),
-            const TextFieldWidget(
-              label: 'التفاصيل',
-              hintText: 'اكتب هنا ...',
-              maxLines: 5,
-              minLines: 5,
-            ),
-            SizedBox(height: 10.h),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: ColorsManager.primary.withOpacity(0.5),
-                foregroundColor: ColorsManager.black,
-                elevation: 0,
+        child: Form(
+          key: controller.formKey,
+          child: ListView(
+            padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 44.h),
+            physics: const BouncingScrollPhysics(),
+            children: [
+              TextFieldWidget(
+                label: 'اسم الملاحظة',
+                hintText: 'اسم الملاحظة',
+                controller: controller.noteTitleController,
               ),
-              child: const Text('استيراد  صورة'),
-            ),
-            Text(
-              'الحد الأقصى لارفاق الصور عدد 5',
-              style: TextStyle(fontSize: 10.sp),
-            ),
-            SizedBox(height: 20.h),
-            ElevatedButton(
-              onPressed: () {
-                Get.back();
-                showSnackbar(message: 'شكرا لك، تم إضافة ملاحظتك بنجاح');
-              },
-              child: const Text('تأكيد'),
-            ),
-          ],
+              TextFieldWidget(
+                label: 'التفاصيل',
+                hintText: 'اكتب هنا ...',
+                controller: controller.noteDetailsController,
+                multiLines: true,
+              ),
+              SizedBox(height: 10.h),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: ColorsManager.primary.withOpacity(0.5),
+                  foregroundColor: ColorsManager.black,
+                  elevation: 0,
+                ),
+                child: const Text('استيراد  صورة'),
+              ),
+              Text(
+                'الحد الأقصى لارفاق الصور عدد 5',
+                style: TextStyle(fontSize: 10.sp),
+              ),
+              SizedBox(height: 20.h),
+              ElevatedButton(
+                onPressed: () {
+                  if (controller.formKey.currentState!.validate()) {
+                    _performAddNote();
+                  }
+                },
+                child: const Text('تأكيد'),
+              ),
+            ],
+          ),
         ),
       ),
     );
+  }
+
+  void _performAddNote() {
+    Get.back();
+    showSnackbar(message: 'شكرا لك، تم إضافة ملاحظتك بنجاح');
   }
 }
