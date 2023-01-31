@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../../core/routes/get_pages.dart';
 import '../../core/routes/routes_manager.dart';
 import '../../core/theme/theme_manager.dart';
-import 'screens/customer_app/unknown_screen.dart';
+import 'customer_app/screens/unknown_screen.dart';
 
 void main() {
   runApp(const MyApp());

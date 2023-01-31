@@ -60,6 +60,7 @@ class ImagesManager {
     '$profileIconsPath/logout.svg',
   ];
   static const List<String> settingsIcons = [
+    '$profileIconsPath/language.svg',
     '$profileIconsPath/address.svg',
     '$profileIconsPath/about_us.svg',
     '$profileIconsPath/privacy.svg',
