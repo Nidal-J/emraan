@@ -22,7 +22,7 @@ class RoutesManager {
   static const notificationsScreen = '/notifications_screen';
   static const notificationsStatusScreen = '/notification_status_screen';
   static const notificationsRejectScreen = '/notification_reject_screen';
-  // Profile
+  // Customer App : Profile
   static const myProfileScreen = '/my_profile_screen';
   static const editMyProfileScreen = '/edit_my_profile_screen';
   static const changePasswordScreen = '/change_password_screen';

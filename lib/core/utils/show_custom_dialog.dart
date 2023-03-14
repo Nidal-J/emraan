@@ -1,5 +1,3 @@
-import 'dart:io' show Platform;
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -13,7 +11,6 @@ void showCustomDialog({
   String? backText,
   bool hasBackButton = true,
 }) {
-  // if (Platform.isAndroid) {
   showDialog(
     context: context,
     barrierColor: Colors.black.withOpacity(0.5),
@@ -76,72 +73,4 @@ void showCustomDialog({
       ),
     ),
   );
-  // } else {
-  // showDialog(
-  //   context: context,
-  //   builder: (context) => CupertinoAlertDialog(
-  //     title: Text(title),
-  //     content: content,
-  //     actions: [
-  //       TextButton(
-  //         onPressed: () {
-  //           Get.back();
-  //         },
-  //         style: TextButton.styleFrom(
-  //           alignment: Alignment.center,
-  //         ),
-  //         child: const Text('إلغاء'),
-  //       ),
-  //       TextButton(
-  //         onPressed: onConfirm,
-  //         style: TextButton.styleFrom(
-  //           alignment: Alignment.center,
-  //         ),
-  //         child: const Text('تأكيد'),
-  //       ),
-  //       // SizedBox(width: 80.w),
-  //     ],
-  //   ),
-  // );
-  // }
-
-  // Get.defaultDialog(
-  //   title: message,
-  //   titlePadding: EdgeInsets.only(top: 20.h),
-  //   middleText: '',
-  //   content: Divider(
-  //     thickness: 1,
-  //     indent: 100.w,
-  //     endIndent: 100.w,
-  //   ),
-  //   contentPadding: EdgeInsets.zero,
-  //   radius: 20.r,
-  //   actions: [
-  //     TextButton(
-  //       onPressed: onConfirm,
-  //       child: Text(
-  //         'Yes',
-  //         style: TextStyle(
-  //           color: ColorsManager.green,
-  //           fontSize: 32.sp,
-  //           fontWeight: FontWeight.bold,
-  //         ),
-  //       ),
-  //     ),
-  //     // SizedBox(width: 80.w),
-  //     TextButton(
-  //       onPressed: () {
-  //         Get.back();
-  //       },
-  //       child: Text(
-  //         'Cancel',
-  //         style: TextStyle(
-  //           color: ColorsManager.green,
-  //           fontSize: 32.sp,
-  //           fontWeight: FontWeight.bold,
-  //         ),
-  //       ),
-  //     ),
-  //   ],
-  // );
 }

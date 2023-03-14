@@ -1,5 +1,7 @@
-import 'package:emraan/merchant_app/screens/customer_evaluation_screen.dart';
-import 'package:emraan/merchant_app/screens/merchant_packages/merchant_package_details_screen.dart';
+import 'package:flutter/animation.dart';
+import 'package:get/get.dart';
+import '../../merchant_app/screens/customer_evaluation_screen.dart';
+import '../../merchant_app/screens/merchant_packages/merchant_package_details_screen.dart';
 import '../../auth/getx/bindings/change_password_binding.dart';
 import '../../auth/getx/bindings/forget_password_binding.dart';
 import '../../auth/getx/bindings/reset_password_binding.dart';
@@ -56,8 +58,6 @@ import '../../merchant_app/screens/merchant_order_details_screen.dart';
 import '../../merchant_app/screens/merchant_packages/add_package_screen.dart';
 import '../../merchant_app/screens/merchant_products/add_product_screen.dart';
 import '../../merchant_app/screens/merchant_products/merchant_product_details_screen.dart';
-import 'package:flutter/animation.dart';
-import 'package:get/get.dart';
 import '../../customer_app/screens/notification/notification_status_screen.dart';
 import '../../auth/screens/welcome_screen.dart';
 import '../../core/routes/routes_manager.dart';

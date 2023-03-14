@@ -34,7 +34,6 @@ class PaymentPay extends GetView<PaymentController> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text('المحفظة'),
-                          // const Spacer(),
                           RichText(
                             text: TextSpan(
                               text: '900',

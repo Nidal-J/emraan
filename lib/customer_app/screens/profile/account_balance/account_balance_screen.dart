@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-
 import '../../../getx/controllers/payment_controller.dart';
 
 class AccountBalanceScreen extends GetView<PaymentController> {
@@ -70,7 +69,6 @@ class AccountBalanceScreen extends GetView<PaymentController> {
                     image: ImagesManager.masterCard,
                     holderName: 'Mohammed Ali',
                     cardNumber: '**********000000', index: index,
-                    // defaultCard: controller.cardIndex.value == index,
                   );
                 },
               ),
@@ -114,8 +112,6 @@ class _PaymentCard extends GetView<PaymentController> {
               child: image != null
                   ? SvgPicture.asset(
                       image!,
-                      // 'assets/images/icons/Vector.svg',
-                      // color: ColorsManager.primary,
                       fit: BoxFit.none,
                     )
                   : const Icon(Icons.payment_outlined),

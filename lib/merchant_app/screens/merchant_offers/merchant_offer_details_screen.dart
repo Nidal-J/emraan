@@ -47,7 +47,6 @@ class MerchantOfferDetailsScreen
                           boxShadow: ConstantsManager.customBoxShadow20,
                           image: DecorationImage(
                             image: AssetImage(ImagesManager.products[2]),
-                            // fit: BoxFit.contain,
                           ),
                         ),
                       );

@@ -112,12 +112,6 @@ class TextFieldWidget extends StatelessWidget {
                   : ColorsManager.subtitleColor,
             ),
             suffixIcon: suffixIcon,
-            // prefixIconConstraints: BoxConstraints(
-            //   maxHeight: 24.h,
-            //   minHeight: 24.h,
-            //   minWidth: 32.h,
-            //   maxWidth: 32.h,
-            // ),
             prefixIcon: isPassword
                 ? Icon(
                     Icons.lock_outline_rounded,
@@ -146,9 +140,7 @@ class TextFieldWidget extends StatelessWidget {
             errorMaxLines: 2,
             errorStyle: const TextStyle(
               color: ColorsManager.danger,
-              // fontSize: 11.sp,
             ),
-            // isDense: true,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.r),
               borderSide: filled
@@ -156,7 +148,8 @@ class TextFieldWidget extends StatelessWidget {
                   : BorderSide(
                       color: fullColored
                           ? ColorsManager.primary
-                          : ColorsManager.subtitleColor),
+                          : ColorsManager.subtitleColor,
+                    ),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.r),

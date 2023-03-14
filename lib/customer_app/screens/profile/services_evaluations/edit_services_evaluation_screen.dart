@@ -58,15 +58,8 @@ class EditServicesEvaluationScreen extends StatelessWidget {
                         color: ColorsManager.subtitleColor,
                       ),
                     ),
-                    // itemBuilder: (context, index) => const Icon(
-                    //   Icons.star_rate_rounded,
-                    //   color: ColorsManager.warning,
-                    // ),
-                    // allowHalfRating: true,
                     updateOnDrag: true,
                     onRatingUpdate: (rating) {
-                      // productController
-                      //     .updateUserRating(rating);
                     },
                   ),
                 ],

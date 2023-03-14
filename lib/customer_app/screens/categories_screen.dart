@@ -1,10 +1,8 @@
-import 'package:emraan/core/constants/colors_manager.dart';
-import 'package:emraan/core/routes/routes_manager.dart';
-import 'package:emraan/core/widgets/top_right_radius.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../../core/constants/constants_manager.dart';
+import '../../core/widgets/top_right_radius.dart';
+import '../../core/routes/routes_manager.dart';
 import '../../core/constants/images_manager.dart';
 import '../../core/widgets/category_card_widget.dart';
 

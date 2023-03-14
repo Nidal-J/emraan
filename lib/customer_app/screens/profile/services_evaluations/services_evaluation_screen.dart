@@ -26,7 +26,6 @@ class ServicesEvaluationScreen extends StatelessWidget {
           },
           itemBuilder: (BuildContext context, int index) {
             return ProfileCardWidget(
-              // padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -59,20 +58,6 @@ class ServicesEvaluationScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // Row(
-                  //   children: List.generate(
-                  //     5,
-                  //     (index) => index < 3
-                  //         ? const Icon(
-                  //             Icons.star_rounded,
-                  //             color: ColorsManager.warning,
-                  //           )
-                  //         : const Icon(
-                  //             Icons.star_outline_rounded,
-                  //             color: ColorsManager.subtitleColor,
-                  //           ),
-                  //   ),
-                  // ),
                   IconButton(
                     padding: EdgeInsets.zero,
                     alignment: Alignment.centerLeft,

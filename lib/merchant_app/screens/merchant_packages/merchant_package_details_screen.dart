@@ -4,7 +4,6 @@ import 'package:emraan/core/constants/images_manager.dart';
 import 'package:emraan/core/constants/text_styles_manager.dart';
 import 'package:emraan/core/widgets/top_right_radius.dart';
 import 'package:emraan/merchant_app/getx/controllers/merchant_package_details_controller.dart';
-import 'package:emraan/merchant_app/getx/controllers/merchant_product_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -37,7 +36,6 @@ class MerchantPackageDetailsScreen
                     itemBuilder: (context, index) {
                       return Container(
                         width: Get.width,
-                        // height: 180.h,
                         margin: EdgeInsets.only(bottom: 50.h),
                         padding: EdgeInsets.symmetric(
                             horizontal: 20.w, vertical: 10.h),
@@ -48,7 +46,6 @@ class MerchantPackageDetailsScreen
                           boxShadow: ConstantsManager.customBoxShadow20,
                           image: DecorationImage(
                             image: AssetImage(ImagesManager.products[2]),
-                            // fit: BoxFit.contain,
                           ),
                         ),
                       );
@@ -147,87 +144,6 @@ class MerchantPackageDetailsScreen
                     style: TextStyle(
                         fontSize: 12.sp, color: ColorsManager.subtitleColor),
                   ),
-                  // Row(
-                  //   children: [
-                  //     Expanded(
-                  //       child: Column(
-                  //         crossAxisAlignment: CrossAxisAlignment.start,
-                  //         children: [
-                  //           Text(
-                  //             'السعة',
-                  //             style: TextStyle(fontSize: 18.sp),
-                  //           ),
-                  //           SizedBox(height: 10.h),
-                  //           SizedBox(
-                  //             height: 40.h,
-                  //             child: ListView.separated(
-                  //               scrollDirection: Axis.horizontal,
-                  //               itemCount: 3,
-                  //               separatorBuilder:
-                  //                   (BuildContext context, int index) {
-                  //                 return SizedBox(width: 10.w);
-                  //               },
-                  //               itemBuilder: (BuildContext context, int index) {
-                  //                 return Container(
-                  //                   padding: EdgeInsets.all(4.r),
-                  //                   constraints: BoxConstraints(
-                  //                     minHeight: 40.r,
-                  //                     minWidth: 40.r,
-                  //                   ),
-                  //                   alignment: Alignment.center,
-                  //                   decoration: BoxDecoration(
-                  //                     borderRadius: BorderRadius.circular(5.r),
-                  //                     border: Border.all(
-                  //                         color: ColorsManager.subtitleColor),
-                  //                     color: ColorsManager.white,
-                  //                   ),
-                  //                   child: Text(
-                  //                     '${index + 1}000\nلتر',
-                  //                     textAlign: TextAlign.center,
-                  //                     style: TextStyle(
-                  //                       color: ColorsManager.subtitleColor,
-                  //                       fontSize: 10.sp,
-                  //                       height: 1.2,
-                  //                     ),
-                  //                   ),
-                  //                 );
-                  //               },
-                  //             ),
-                  //           ),
-                  //         ],
-                  //       ),
-                  //     ),
-                  //     Expanded(
-                  //       child: Column(
-                  //         crossAxisAlignment: CrossAxisAlignment.stretch,
-                  //         children: [
-                  //           Text(
-                  //             'الكمية المتوفرة',
-                  //             style: TextStyle(fontSize: 24.sp),
-                  //           ),
-                  //           Container(
-                  //             height: 40.h,
-                  //             width: 40.w,
-                  //             alignment: Alignment.center,
-                  //             decoration: BoxDecoration(
-                  //               borderRadius: BorderRadius.circular(5.r),
-                  //               color: ColorsManager.cardColor,
-                  //             ),
-                  //             child: Text(
-                  //               '85',
-                  //               textAlign: TextAlign.center,
-                  //               style: TextStyle(
-                  //                 color: ColorsManager.subtitleColor,
-                  //                 fontSize: 24.sp,
-                  //                 height: 1.5,
-                  //               ),
-                  //             ),
-                  //           ),
-                  //         ],
-                  //       ),
-                  //     ),
-                  //   ],
-                  // ),
                   SizedBox(height: 30.h),
                   Row(
                     children: [

@@ -151,7 +151,6 @@ class _OrderStatus extends GetView<OrdersController> {
         () => AnimatedContainer(
           padding: EdgeInsets.symmetric(
               horizontal: controller.pageIndex.value == index ? 16.w : 4.w),
-          // margin: EdgeInsets.only(left: index != 3 ? 16.w : 0),
           alignment: Alignment.center,
           height: 28.h,
           constraints: BoxConstraints(minWidth: 60.w),

@@ -1,6 +1,5 @@
 import 'package:emraan/core/constants/colors_manager.dart';
 import 'package:emraan/core/constants/constants_manager.dart';
-import 'package:emraan/core/routes/routes_manager.dart';
 import 'package:emraan/core/widgets/top_right_radius.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

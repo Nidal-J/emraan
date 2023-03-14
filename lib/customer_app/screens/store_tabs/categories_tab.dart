@@ -3,8 +3,6 @@ import 'package:emraan/core/widgets/category_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../../../core/constants/colors_manager.dart';
-import '../../../core/constants/constants_manager.dart';
 import '../../../core/routes/routes_manager.dart';
 
 class CategoriesTab extends StatelessWidget {

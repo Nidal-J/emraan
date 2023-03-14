@@ -28,10 +28,6 @@ class AddOfferScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   const Text('حدد المنتج الذي تريد عليه العرض'),
-                  // TextButton(
-                  //   onPressed: () {},
-                  //   child:
-                  // ),
                   InkWell(
                     onTap: () {},
                     child: Padding(

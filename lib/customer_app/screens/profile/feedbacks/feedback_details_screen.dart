@@ -84,7 +84,6 @@ class FeedbackDetailsScreen extends GetView<FeedbackDetailsController> {
                                 horizontal: 20.w, vertical: 14.h),
                             decoration: BoxDecoration(
                               color: ColorsManager.danger.withOpacity(0.3),
-                              // color: Color(0xFFFEEBB4),
                               borderRadius: BorderRadius.circular(10.r),
                             ),
                             child: Text(

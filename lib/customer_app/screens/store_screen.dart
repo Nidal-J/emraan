@@ -1,8 +1,8 @@
-import 'package:emraan/core/widgets/top_right_radius.dart';
-import 'package:emraan/customer_app/screens/store_tabs/categories_tab.dart';
-import 'package:emraan/customer_app/screens/store_tabs/offers_tab.dart';
-import 'package:emraan/customer_app/screens/store_tabs/packages_tab.dart';
-import 'package:emraan/customer_app/screens/store_tabs/products_tab.dart';
+import '../../core/widgets/top_right_radius.dart';
+import '../../customer_app/screens/store_tabs/categories_tab.dart';
+import '../../customer_app/screens/store_tabs/offers_tab.dart';
+import '../../customer_app/screens/store_tabs/packages_tab.dart';
+import '../../customer_app/screens/store_tabs/products_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';

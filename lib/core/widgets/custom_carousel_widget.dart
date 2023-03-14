@@ -10,13 +10,10 @@ class CustomCarouselWidget extends StatelessWidget {
     required this.images,
     required this.bannerIndex,
     required this.bannerController,
-    // required this.controller,
   }) : super(key: key);
   final List<String> images;
   final RxInt bannerIndex;
   final PageController bannerController;
-
-  // final ProductDetailsController controller;
 
   @override
   Widget build(BuildContext context) {

@@ -21,37 +21,12 @@ class ConstantsManager {
       offset: Offset(0, 4),
     ),
   ];
+
   static const List<BoxShadow> customBoxShadow10 = [
     BoxShadow(
       color: ColorsManager.shadow20,
       blurRadius: 10,
       offset: Offset(0, 0),
-    ),
-  ];
-
-  static const List<BoxShadow> homeBoxShadow = [
-    BoxShadow(
-      color: ColorsManager.shadow10,
-      blurRadius: 50,
-      spreadRadius: 5,
-      offset: Offset(0, 4),
-    ),
-  ];
-
-  static const List<BoxShadow> bottomNavBarBoxShadow = [
-    BoxShadow(
-      color: ColorsManager.shadow20,
-      blurRadius: 15,
-      spreadRadius: 5,
-      offset: Offset(0, 0.5),
-    ),
-  ];
-  static const List<BoxShadow> orderCardBoxShadow = [
-    BoxShadow(
-      color: ColorsManager.shadow20,
-      blurRadius: 20,
-      spreadRadius: 0,
-      offset: Offset(0, 4),
     ),
   ];
 }

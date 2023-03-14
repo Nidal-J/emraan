@@ -1,7 +1,7 @@
-import 'package:emraan/core/constants/colors_manager.dart';
-import 'package:emraan/core/constants/constants_manager.dart';
-import 'package:emraan/core/routes/routes_manager.dart';
-import 'package:emraan/core/widgets/top_right_radius.dart';
+import '../../core/constants/colors_manager.dart';
+import '../../core/constants/constants_manager.dart';
+import '../../core/routes/routes_manager.dart';
+import '../../core/widgets/top_right_radius.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -51,7 +51,6 @@ class HomeScreen extends GetView<HomeController> {
                   ),
                   IconButton(
                     onPressed: () {
-                      // Get.to(() => const TestScreen());
                     },
                     visualDensity: VisualDensity.compact,
                     color: ColorsManager.iconsColor,
@@ -100,7 +99,6 @@ class HomeScreen extends GetView<HomeController> {
                         height: 20.h,
                       ),
                     ),
-                    // icon: Icon(Icons.home_outlined),
                     label: 'الرئيسية',
                   ),
                   BottomNavigationBarItem(
@@ -114,7 +112,6 @@ class HomeScreen extends GetView<HomeController> {
                         height: 20.h,
                       ),
                     ),
-                    // icon: Icon(Icons.store_outlined),
                     label: 'المتاجر',
                   ),
                   BottomNavigationBarItem(
@@ -128,7 +125,6 @@ class HomeScreen extends GetView<HomeController> {
                         height: 20.h,
                       ),
                     ),
-                    // icon: Icon(Icons.menu_open_outlined),
                     label: 'طلباتي',
                   ),
                   BottomNavigationBarItem(
@@ -140,10 +136,8 @@ class HomeScreen extends GetView<HomeController> {
                             ? ColorsManager.primary
                             : ColorsManager.subtitleColor,
                         height: 20.h,
-                        // fit: BoxFit.cover,
                       ),
                     ),
-                    // icon: Icon(Icons.person_outline_rounded),
                     label: 'صفحتي',
                   ),
                 ],

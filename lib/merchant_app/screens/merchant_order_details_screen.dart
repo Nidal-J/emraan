@@ -169,7 +169,6 @@ class MerchantOrderDetailsScreen extends GetView<MerchantOrdersController> {
               ),
               SizedBox(width: 12.w),
               Expanded(
-                // flex: controller.isAccepted.value ? 9 : 1,
                 child: controller.isAccepted.value
                     ? OutlinedButton(
                         onPressed: () {
@@ -225,56 +224,6 @@ class MerchantOrderDetailsScreen extends GetView<MerchantOrdersController> {
       },
       hasBackButton: false,
     );
-    // showDialog(
-    //   context: context,
-    //   barrierColor: Colors.black.withOpacity(0.5),
-    //   builder: (context) => Dialog(
-    //     backgroundColor: Colors.transparent,
-    //     clipBehavior: Clip.antiAlias,
-    //     insetPadding: EdgeInsets.zero,
-    //     child: Container(
-    //       decoration: BoxDecoration(
-    //         color: ColorsManager.white,
-    //         borderRadius: BorderRadius.circular(30.r),
-    //       ),
-    //       clipBehavior: Clip.antiAlias,
-    //       width: double.infinity,
-    //       padding: const EdgeInsets.all(20),
-    //       child: Column(
-    //         mainAxisSize: MainAxisSize.min,
-    //         children: [
-    //           Text(
-    //             'حدد موعد التوصيل',
-    //             style: TextStyle(
-    //               fontSize: 20.sp,
-    //               fontWeight: FontWeight.bold,
-    //             ),
-    //           ),
-    //           SizedBox(height: 20.h),
-    //           const TextFieldWidget(
-    //             label: 'تاريخ التوصيل',
-    //             hintText: '16/12/2022',
-    //             prefixIcon: Icon(Icons.date_range_rounded),
-    //           ),
-    //           SizedBox(height: 10.h),
-    //           const TextFieldWidget(
-    //             label: 'وقت التوصيل',
-    //             hintText: '16:30',
-    //             prefixIcon: Icon(Icons.schedule_rounded),
-    //           ),
-    //           SizedBox(height: 36.h),
-    //           ElevatedButton(
-    //             onPressed: () {
-    //               Get.back();
-    //               showSnackbar(message: 'تم تأكيد الطلب بنجاح');
-    //             },
-    //             child: const Text('تأكيد'),
-    //           ),
-    //         ],
-    //       ),
-    //     ),
-    //   ),
-    // );
   }
 
   void _performRejectOrder(BuildContext context) {
@@ -334,118 +283,6 @@ class MerchantOrderDetailsScreen extends GetView<MerchantOrdersController> {
         showSnackbar(message: 'تم رفض الطلب');
       },
     );
-    // showDialog(
-    //   context: context,
-    //   barrierColor: Colors.black.withOpacity(0.5),
-    //   builder: (context) => Dialog(
-    //     backgroundColor: Colors.transparent,
-    //     clipBehavior: Clip.antiAlias,
-    //     insetPadding: EdgeInsets.zero,
-    //     child: Container(
-    //       decoration: BoxDecoration(
-    //         color: ColorsManager.white,
-    //         borderRadius: BorderRadius.circular(30.r),
-    //       ),
-    //       clipBehavior: Clip.antiAlias,
-    //       width: double.infinity,
-    //       padding: const EdgeInsets.all(20),
-    //       child: Column(
-    //         mainAxisSize: MainAxisSize.min,
-    //         children: [
-    //           Text(
-    //             'حدد سبب رفض الطلب',
-    //             style: TextStyle(
-    //               fontSize: 20.sp,
-    //               fontWeight: FontWeight.bold,
-    //             ),
-    //           ),
-    //           SizedBox(height: 20.h),
-    //           ListView.separated(
-    //             shrinkWrap: true,
-    //             physics: const NeverScrollableScrollPhysics(),
-    //             itemCount: 3,
-    //             separatorBuilder: (BuildContext context, int index) {
-    //               return SizedBox(height: 10.h);
-    //             },
-    //             itemBuilder: (BuildContext context, int index) {
-    //               return InkWell(
-    //                 onTap: () {
-    //                   if (index == 2) {
-    //                     _addAnotherReason(context);
-    //                   } else {
-    //                     controller.rejectReasonIndex.value = index;
-    //                   }
-    //                 },
-    //                 child: Container(
-    //                   padding: EdgeInsets.fromLTRB(20.w, 16.h, 30.w, 16.h),
-    //                   decoration: BoxDecoration(
-    //                     borderRadius: BorderRadius.circular(10.r),
-    //                     border: Border.all(color: ColorsManager.subtitleColor),
-    //                   ),
-    //                   child: Row(
-    //                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    //                     children: [
-    //                       Text(
-    //                         reasons[index],
-    //                         style: TextStyle(fontSize: 12.sp),
-    //                       ),
-    //                       index == 2
-    //                           // ? IconButton(
-    //                           //     onPressed: () {},
-    //                           //     padding: EdgeInsets.zero,
-    //                           //     alignment: Alignment.centerLeft,
-    //                           //     icon: Icon(Icons.arrow_forward_ios_rounded),
-    //                           //   )
-    //                           ? Icon(Icons.arrow_forward_ios_rounded)
-    //                           : Obx(() => CircleAvatar(
-    //                                 radius: 11.r,
-    //                                 backgroundColor:
-    //                                     ColorsManager.subtitleColor,
-    //                                 child: CircleAvatar(
-    //                                   radius: 10.r,
-    //                                   backgroundColor:
-    //                                       controller.rejectReasonIndex.value ==
-    //                                               index
-    //                                           ? ColorsManager.success
-    //                                           : ColorsManager.white,
-    //                                 ),
-    //                               )),
-    //                     ],
-    //                   ),
-    //                 ),
-    //               );
-    //             },
-    //           ),
-    //           SizedBox(height: 36.h),
-    //           Row(
-    //             children: [
-    //               Expanded(
-    //                 child: ElevatedButton(
-    //                   onPressed: () {
-    //                     Get.back();
-    //                     showSnackbar(message: 'تم رفض الطلب');
-    //                   },
-    //                   child: const Text('تأكيد'),
-    //                 ),
-    //               ),
-    //               SizedBox(width: 12.w),
-    //               Expanded(
-    //                 child: OutlinedButton(
-    //                   onPressed: () {
-    //                     Get.back();
-    //                   },
-    //                   style:
-    //                       OutlinedButton.styleFrom(alignment: Alignment.center),
-    //                   child: const Text('إلغاء'),
-    //                 ),
-    //               ),
-    //             ],
-    //           ),
-    //         ],
-    //       ),
-    //     ),
-    //   ),
-    // );
   }
 
   void _addAnotherReason(BuildContext context) {

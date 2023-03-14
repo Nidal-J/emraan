@@ -42,7 +42,6 @@ class FeedbacksScreen extends StatelessWidget {
                           Get.toNamed(RoutesManager.feedbackDetailsScreen),
                       child: ProfileCardWidget(
                         child: Row(
-                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Expanded(
                               child: Text(

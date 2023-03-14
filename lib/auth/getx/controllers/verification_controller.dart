@@ -5,28 +5,9 @@ import 'package:get/state_manager.dart';
 class VerificationController extends GetxController {
   final codeController = TextEditingController();
   final codeCompleted = false.obs;
-  // final firstCodeTextController = TextEditingController();
-  // final secondCodeTextController = TextEditingController();
-  // final thirdCodeTextController = TextEditingController();
-  // final fourthCodeTextController = TextEditingController();
-
-  // final firstFocusNode = FocusNode();
-  // final secondFocusNode = FocusNode();
-  // final thirdFocusNode = FocusNode();
-  // final fourthFocusNode = FocusNode();
-
   final isLoading = false.obs;
-  // final code = ''.obs;
-
-  late Timer timer;
   final counter = 0.obs;
-
-  // void updateCode() {
-  //   code.value = firstCodeTextController.text +
-  //       secondCodeTextController.text +
-  //       thirdCodeTextController.text +
-  //       fourthCodeTextController.text;
-  // }
+  late Timer timer;
 
   void setTimer() {
     counter(60);

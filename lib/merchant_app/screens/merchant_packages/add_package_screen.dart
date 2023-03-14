@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../../../../core/constants/colors_manager.dart';
-import '../../../core/constants/text_styles_manager.dart';
 
 class AddPackageScreen extends StatelessWidget {
   const AddPackageScreen({super.key});
@@ -54,8 +53,6 @@ class AddPackageScreen extends StatelessWidget {
                 border: Border.all(color: ColorsManager.subtitleColor),
               ),
               child: DropdownButton<String>(
-                // borderRadius: BorderRadius.circular(7.r),
-                // iconEnabledColor: Colors.black,
                 icon: const Icon(Icons.keyboard_arrow_down),
                 isExpanded: true,
                 underline: Container(),
@@ -88,8 +85,6 @@ class AddPackageScreen extends StatelessWidget {
                 border: Border.all(color: ColorsManager.subtitleColor),
               ),
               child: DropdownButton<String>(
-                // borderRadius: BorderRadius.circular(7.r),
-                // iconEnabledColor: Colors.black,
                 icon: const Icon(Icons.keyboard_arrow_down),
                 isExpanded: true,
                 underline: Container(),
@@ -123,10 +118,6 @@ class AddPackageScreen extends StatelessWidget {
                 Container(
                   height: 55.r,
                   width: 70.r,
-                  // constraints: BoxConstraints(
-                  //   minHeight: 57.r,
-                  //   minWidth: 57.r,
-                  // ),
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.r),
@@ -165,10 +156,6 @@ class AddPackageScreen extends StatelessWidget {
                 const Spacer(),
                 InkWell(
                   onTap: () {
-                    // controller.addFocusNode.requestFocus();
-                    // if (controller.counter.value < 10) {
-                    //   controller.counter.value++;
-                    // }
                   },
                   child: Container(
                     height: 40.r,
@@ -193,10 +180,6 @@ class AddPackageScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    // controller.minusFocusNode.requestFocus();
-                    // if (controller.counter.value > 1) {
-                    //   controller.counter.value--;
-                    // }
                   },
                   child: Container(
                     height: 40.r,
@@ -223,16 +206,11 @@ class AddPackageScreen extends StatelessWidget {
                     alignment: Alignment.bottomLeft,
                     children: [
                       const TextFieldWidget(
-                        // label: '',
                         hintText: 'اكتب هنا ...',
                       ),
                       Container(
                         height: 55.r,
                         width: 55.r,
-                        // constraints: BoxConstraints(
-                        //   minHeight: 57.r,
-                        //   minWidth: 57.r,
-                        // ),
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.r),
@@ -252,16 +230,11 @@ class AddPackageScreen extends StatelessWidget {
                     alignment: Alignment.bottomLeft,
                     children: [
                       const TextFieldWidget(
-                        // label: '',
                         hintText: 'اكتب هنا ...',
                       ),
                       Container(
                         height: 55.r,
                         width: 55.r,
-                        // constraints: BoxConstraints(
-                        //   minHeight: 57.r,
-                        //   minWidth: 57.r,
-                        // ),
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.r),
@@ -292,7 +265,6 @@ class AddPackageScreen extends StatelessWidget {
                 ),
               ),
             ),
-            // SizedBox(height: 22.h),
             const TextFieldWidget(
               label: 'الكمية المتوفرة من المنتج',
               hintText: '00',

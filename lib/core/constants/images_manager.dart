@@ -1,5 +1,6 @@
 class ImagesManager {
   static const String mainPath = 'assets/images';
+  // TODO: Delete (products, categories) images, just for test
   static const List<String> products = [
     '$mainPath/product1.png',
     '$mainPath/product2.png',

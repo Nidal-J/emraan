@@ -53,8 +53,6 @@ class AddProductScreen extends StatelessWidget {
                 border: Border.all(color: ColorsManager.subtitleColor),
               ),
               child: DropdownButton<String>(
-                // borderRadius: BorderRadius.circular(7.r),
-                // iconEnabledColor: Colors.black,
                 isExpanded: true,
                 underline: Container(),
                 value: 'test1',
@@ -86,16 +84,11 @@ class AddProductScreen extends StatelessWidget {
                     alignment: Alignment.bottomLeft,
                     children: [
                       const TextFieldWidget(
-                        // label: '',
                         hintText: 'اكتب هنا ...',
                       ),
                       Container(
                         height: 55.r,
                         width: 55.r,
-                        // constraints: BoxConstraints(
-                        //   minHeight: 57.r,
-                        //   minWidth: 57.r,
-                        // ),
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.r),
@@ -115,16 +108,11 @@ class AddProductScreen extends StatelessWidget {
                     alignment: Alignment.bottomLeft,
                     children: [
                       const TextFieldWidget(
-                        // label: '',
                         hintText: 'اكتب هنا ...',
                       ),
                       Container(
                         height: 55.r,
                         width: 55.r,
-                        // constraints: BoxConstraints(
-                        //   minHeight: 57.r,
-                        //   minWidth: 57.r,
-                        // ),
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.r),

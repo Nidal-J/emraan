@@ -1,5 +1,5 @@
-import 'package:emraan/core/constants/text_styles_manager.dart';
-import 'package:emraan/core/widgets/top_right_radius.dart';
+import '../../core/constants/text_styles_manager.dart';
+import '../../core/widgets/top_right_radius.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';

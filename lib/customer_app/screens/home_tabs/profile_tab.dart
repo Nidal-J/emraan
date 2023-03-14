@@ -36,7 +36,6 @@ class ProfileTab extends StatelessWidget {
     () => log('message'),
     () => log('message'),
     () => log('message'),
-    // () => ,
   ];
 
   @override
