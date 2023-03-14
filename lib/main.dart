@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../../core/routes/get_pages.dart';
-import '../../core/routes/routes_manager.dart';
-import '../../core/theme/theme_manager.dart';
-import 'customer_app/screens/unknown_screen.dart';
+import 'routes/get_pages.dart';
+import 'routes/routes_manager.dart';
+import 'theme/theme_manager.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,10 +47,6 @@ class MyApp extends StatelessWidget {
           initialRoute: RoutesManager.welcomeScreen,
           getPages: getPages,
           defaultTransition: Transition.fade,
-          unknownRoute: GetPage(
-            name: RoutesManager.unknownScreen,
-            page: () => const UnknownScreen(),
-          ),
         );
       },
     );
