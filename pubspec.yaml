@@ -36,11 +36,6 @@ flutter:
     - assets/images/profile_icons/
 
   fonts:
-    # - family: FFShamelFamily
-    #   fonts:
-    #     - asset: assets/fonts/FFShamelFamily-SansOneBold.ttf
-    #       weight: 700
-    #     - asset: assets/fonts/FFShamelFamily-SansOneBook.ttf
     - family: Cairo
       fonts:
         - asset: assets/fonts/Cairo-ExtraLight.ttf
