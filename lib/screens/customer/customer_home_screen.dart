@@ -42,7 +42,7 @@ class CustomerHomeScreen extends GetView<CustomerHomeController> {
                 children: [
                   IconButton(
                     onPressed: () {
-                      Get.toNamed(RoutesManager.cartScreen);
+                      Get.toNamed(RoutesManager.customerCartScreen);
                     },
                     visualDensity: VisualDensity.compact,
                     color: ColorsManager.iconsColor,
@@ -63,7 +63,7 @@ class CustomerHomeScreen extends GetView<CustomerHomeController> {
                   padding: EdgeInsets.symmetric(horizontal: 10.h),
                   child: IconButton(
                     onPressed: () =>
-                        Get.toNamed(RoutesManager.notificationsScreen),
+                        Get.toNamed(RoutesManager.customerNotificationsScreen),
                     color: ColorsManager.iconsColor,
                     iconSize: 20.r,
                     icon: const Icon(Icons.notification_add_outlined),

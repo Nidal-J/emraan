@@ -17,10 +17,10 @@ class CustomerSettingsScreen extends StatelessWidget {
   ];
 
   static final List<void Function()?> _listActions = [
-    () => Get.toNamed(RoutesManager.languagesScreen),
-    () => Get.toNamed(RoutesManager.ourAddressScreen),
-    () => Get.toNamed(RoutesManager.aboutUsScreen),
-    () => Get.toNamed(RoutesManager.privacyPolicyScreen),
+    () => Get.toNamed(RoutesManager.customerLanguagesScreen),
+    () => Get.toNamed(RoutesManager.customerOurAddressScreen),
+    () => Get.toNamed(RoutesManager.customerAboutUsScreen),
+    () => Get.toNamed(RoutesManager.customerPrivacyPolicyScreen),
   ];
   @override
   Widget build(BuildContext context) {

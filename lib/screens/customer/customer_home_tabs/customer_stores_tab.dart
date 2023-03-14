@@ -21,7 +21,7 @@ class CustomerStoresTab extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 44.h),
       itemBuilder: (BuildContext context, int index) {
         return InkWell(
-          onTap: () => Get.toNamed(RoutesManager.storeScreen),
+          onTap: () => Get.toNamed(RoutesManager.customerStoreScreen),
           child: const CustomerCategoryCardWidget(
             image: ImagesManager.logo2,
             title: 'اسم المتجر',

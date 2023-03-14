@@ -99,8 +99,8 @@ class CustomerOrdersTab extends GetView<CustomerOrdersController> {
                                   ),
                                   const Spacer(),
                                   InkWell(
-                                    onTap: () => Get.toNamed(
-                                        RoutesManager.orderDetailsScreen),
+                                    onTap: () => Get.toNamed(RoutesManager
+                                        .customerOrderDetailsScreen),
                                     child: Text(
                                       'تفاصيل الطلب ',
                                       style: TextStyle(

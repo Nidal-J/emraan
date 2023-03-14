@@ -60,9 +60,10 @@ class CustomerPaymentScreen extends GetView<CustomerPaymentController> {
                   onPressed: () {
                     if (controller.progressIndex.value == 2) {
                       Get.offNamedUntil(
-                          RoutesManager.paymentSuccessScreen,
+                          RoutesManager.customerPaymentSuccessScreen,
                           (route) =>
-                              route.settings.name == RoutesManager.homeScreen);
+                              route.settings.name ==
+                              RoutesManager.customerHomeScreen);
                     } else {
                       controller.progressIndex.value++;
                     }

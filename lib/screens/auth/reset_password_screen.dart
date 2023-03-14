@@ -118,7 +118,7 @@ class ResetPasswordScreen extends GetView<ResetPasswordController> {
     controller.isLoading(true);
     // TODO: Replace with api request
     await Future.delayed(const Duration(milliseconds: 500)).then((value) {
-      Get.offAllNamed(RoutesManager.homeScreen);
+      Get.offAllNamed(RoutesManager.customerHomeScreen);
       showSnackbar(message: 'تم إعادة ضبط كلمة المرور بنجاح');
     });
     controller.isLoading(false);

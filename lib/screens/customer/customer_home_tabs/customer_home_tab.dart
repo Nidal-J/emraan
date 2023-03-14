@@ -45,8 +45,8 @@ class CustomerHomeTab extends StatelessWidget {
                       },
                       itemBuilder: (BuildContext context, int index) {
                         return InkWell(
-                          onTap: () =>
-                              Get.toNamed(RoutesManager.productDetailsScreen),
+                          onTap: () => Get.toNamed(
+                              RoutesManager.customerProductDetailsScreen),
                           child: ProductCard(
                             storeName: 'اسم المتجر',
                             productDescription: 'خزان مياه حجم 2000لتر',
@@ -64,7 +64,7 @@ class CustomerHomeTab extends StatelessWidget {
                 top: 0,
                 left: 12,
                 child: InkWell(
-                  onTap: () => Get.toNamed(RoutesManager.offersScreen),
+                  onTap: () => Get.toNamed(RoutesManager.customerOffersScreen),
                   child: Container(
                     height: 22.r,
                     width: 22.r,
@@ -111,8 +111,8 @@ class CustomerHomeTab extends StatelessWidget {
                       },
                       itemBuilder: (BuildContext context, int index) {
                         return InkWell(
-                          onTap: () =>
-                              Get.toNamed(RoutesManager.categoriesScreen),
+                          onTap: () => Get.toNamed(
+                              RoutesManager.customerCategoriesScreen),
                           child: CustomerCategoryCardWidget(
                             image: ImagesManager.categories[index],
                             title: 'اسمنت',
@@ -129,7 +129,7 @@ class CustomerHomeTab extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     log('message');
-                    Get.toNamed(RoutesManager.categoriesScreen);
+                    Get.toNamed(RoutesManager.customerCategoriesScreen);
                   },
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
@@ -169,7 +169,8 @@ class CustomerHomeTab extends StatelessWidget {
                       },
                       itemBuilder: (BuildContext context, int index) {
                         return InkWell(
-                          onTap: () => Get.toNamed(RoutesManager.storeScreen),
+                          onTap: () =>
+                              Get.toNamed(RoutesManager.customerStoreScreen),
                           child: const CustomerCategoryCardWidget(
                             image: ImagesManager.logo2,
                             title: 'اسم المتجر',

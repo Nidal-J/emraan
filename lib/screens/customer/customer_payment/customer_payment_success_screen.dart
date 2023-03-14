@@ -38,7 +38,7 @@ class CustomerPaymentSuccessScreen extends GetView<CustomerPaymentController> {
                   const Text('رقم الفاتورة '),
                   TextButton(
                     onPressed: () =>
-                        Get.toNamed(RoutesManager.orderDetailsScreen),
+                        Get.toNamed(RoutesManager.customerOrderDetailsScreen),
                     child: const Text('#002211'),
                   )
                 ],
@@ -47,7 +47,7 @@ class CustomerPaymentSuccessScreen extends GetView<CustomerPaymentController> {
               ElevatedButton(
                 onPressed: () {
                   CustomerHomeController().pageIndex(0);
-                  Get.offAllNamed(RoutesManager.homeScreen);
+                  Get.offAllNamed(RoutesManager.customerHomeScreen);
                 },
                 child: const Text('العودة للرئيسية'),
               ),

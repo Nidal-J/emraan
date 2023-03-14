@@ -132,7 +132,7 @@ class CustomerCartScreen extends StatelessWidget {
               flex: 3,
               child: ElevatedButton(
                 onPressed: () {
-                  Get.toNamed(RoutesManager.paymentScreen);
+                  Get.toNamed(RoutesManager.customerPaymentScreen);
                 },
                 child: const Text('الدفع'),
               ),

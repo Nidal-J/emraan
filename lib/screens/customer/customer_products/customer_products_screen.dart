@@ -27,7 +27,8 @@ class CustomerProductsScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 44.h),
           itemBuilder: (BuildContext context, int index) {
             return InkWell(
-              onTap: () => Get.toNamed(RoutesManager.productDetailsScreen),
+              onTap: () =>
+                  Get.toNamed(RoutesManager.customerProductDetailsScreen),
               child: ProductCard(
                 storeName: 'اسم المتجر',
                 productDescription: 'خزان مياه حجم 2000لتر',

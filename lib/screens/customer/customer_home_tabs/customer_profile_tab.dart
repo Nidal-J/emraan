@@ -27,12 +27,12 @@ class CustomerProfileTab extends StatelessWidget {
   ];
 
   static final List<void Function()?> _listActions = [
-    () => Get.toNamed(RoutesManager.accountBalanceScreen),
-    () => Get.toNamed(RoutesManager.addressScreen),
-    () => Get.toNamed(RoutesManager.servicesEvaluationScreen),
-    () => Get.toNamed(RoutesManager.feedbacksScreen),
-    () => Get.toNamed(RoutesManager.wishListScreen),
-    () => Get.toNamed(RoutesManager.settingsScreen),
+    () => Get.toNamed(RoutesManager.customerAccountBalanceScreen),
+    () => Get.toNamed(RoutesManager.customerAddressScreen),
+    () => Get.toNamed(RoutesManager.customerServicesEvaluationScreen),
+    () => Get.toNamed(RoutesManager.customerFeedbacksScreen),
+    () => Get.toNamed(RoutesManager.customerWishListScreen),
+    () => Get.toNamed(RoutesManager.customerSettingsScreen),
     () => log('message'),
     () => log('message'),
     () => log('message'),
@@ -44,7 +44,7 @@ class CustomerProfileTab extends StatelessWidget {
       padding: EdgeInsets.all(20.r),
       children: [
         InkWell(
-          onTap: () => Get.toNamed(RoutesManager.myProfileScreen),
+          onTap: () => Get.toNamed(RoutesManager.customerMyProfileScreen),
           child: CircleAvatar(
             radius: 54.r,
             backgroundColor: ColorsManager.white,

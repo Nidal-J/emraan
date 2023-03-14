@@ -197,7 +197,7 @@ class LoginScreen extends GetView<LoginController> {
                   SizedBox(height: 10.h),
                   OutlinedButton(
                     onPressed: () {
-                      Get.offAllNamed(RoutesManager.homeScreen);
+                      Get.offAllNamed(RoutesManager.customerHomeScreen);
                     },
                     style: OutlinedButton.styleFrom(
                       foregroundColor: ColorsManager.primary,
@@ -229,7 +229,7 @@ class LoginScreen extends GetView<LoginController> {
     // TODO: Replace with api request
     await Future.delayed(const Duration(seconds: 1)).then((value) {
       controller.isLoading(false);
-      Get.offAllNamed(RoutesManager.homeScreen);
+      Get.offAllNamed(RoutesManager.customerHomeScreen);
       showSnackbar(message: 'تم تسجيل الدخول بنجاح');
     });
   }

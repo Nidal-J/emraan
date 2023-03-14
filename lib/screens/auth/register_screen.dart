@@ -184,7 +184,7 @@ class RegisterScreen extends GetView<RegisterController> {
     // TODO: Replace with api request
     await Future.delayed(const Duration(seconds: 1)).then((value) {
       controller.isLoading(false);
-      Get.offAllNamed(RoutesManager.homeScreen);
+      Get.offAllNamed(RoutesManager.customerHomeScreen);
       showSnackbar(message: 'تم إنشاء الحساب بنجاح');
     });
   }

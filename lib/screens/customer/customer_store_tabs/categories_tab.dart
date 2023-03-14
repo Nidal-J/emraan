@@ -21,7 +21,7 @@ class CategoriesTab extends StatelessWidget {
       itemCount: 6,
       itemBuilder: (BuildContext context, int index) {
         return InkWell(
-          onTap: () => Get.toNamed(RoutesManager.productsScreen),
+          onTap: () => Get.toNamed(RoutesManager.customerProductsScreen),
           child: CustomerCategoryCardWidget(
             image: ImagesManager.categories[index],
             title: 'اسم الفئة',

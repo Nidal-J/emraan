@@ -23,7 +23,8 @@ class CustomerFeedbacksScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               ElevatedButton(
-                onPressed: () => Get.toNamed(RoutesManager.addFeedbackScreen),
+                onPressed: () =>
+                    Get.toNamed(RoutesManager.customerAddFeedbackScreen),
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(Get.width * 0.4, 46.h),
                 ),
@@ -39,8 +40,8 @@ class CustomerFeedbacksScreen extends StatelessWidget {
                   },
                   itemBuilder: (BuildContext context, int index) {
                     return InkWell(
-                      onTap: () =>
-                          Get.toNamed(RoutesManager.feedbackDetailsScreen),
+                      onTap: () => Get.toNamed(
+                          RoutesManager.customerFeedbackDetailsScreen),
                       child: CustomerProfileCardWidget(
                         child: Row(
                           children: [

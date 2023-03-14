@@ -68,6 +68,7 @@ final List<GetPage<dynamic>> getPages = [
     name: RoutesManager.welcomeScreen,
     page: () => const WelcomeScreen(),
   ),
+  // Auth
   GetPage(
     name: RoutesManager.loginScreen,
     page: () => const LoginScreen(),
@@ -94,145 +95,146 @@ final List<GetPage<dynamic>> getPages = [
     binding: VerificationBinding(),
   ),
   GetPage(
-    name: RoutesManager.homeScreen,
+    name: RoutesManager.customerHomeScreen,
     page: () => const CustomerHomeScreen(),
     binding: CustomerHomeBinding(),
   ),
   GetPage(
-    name: RoutesManager.offersScreen,
+    name: RoutesManager.customerOffersScreen,
     page: () => const CustomerOffersScreen(),
   ),
   GetPage(
-    name: RoutesManager.categoriesScreen,
+    name: RoutesManager.customerCategoriesScreen,
     page: () => const CustomerCategoriesScreen(),
   ),
   GetPage(
-    name: RoutesManager.productsScreen,
+    name: RoutesManager.customerProductsScreen,
     page: () => const CustomerProductsScreen(),
   ),
   GetPage(
-    name: RoutesManager.productDetailsScreen,
+    name: RoutesManager.customerProductDetailsScreen,
     page: () => const CustomerProductDetailsScreen(),
     binding: CustomerProductDetailsBinding(),
   ),
   GetPage(
-    name: RoutesManager.orderDetailsScreen,
+    name: RoutesManager.customerOrderDetailsScreen,
     page: () => const CustomerOrderDetailsScreen(),
   ),
   GetPage(
-    name: RoutesManager.cartScreen,
+    name: RoutesManager.customerCartScreen,
     page: () => const CustomerCartScreen(),
   ),
   GetPage(
-    name: RoutesManager.paymentScreen,
+    name: RoutesManager.customerPaymentScreen,
     page: () => const CustomerPaymentScreen(),
     binding: CustomerPaymentBinding(),
   ),
   GetPage(
-    name: RoutesManager.paymentSuccessScreen,
+    name: RoutesManager.customerPaymentSuccessScreen,
     page: () => const CustomerPaymentSuccessScreen(),
   ),
   GetPage(
-    name: RoutesManager.storeScreen,
+    name: RoutesManager.customerStoreScreen,
     page: () => const CustomerStoreScreen(),
   ),
   GetPage(
-    name: RoutesManager.notificationsScreen,
+    name: RoutesManager.customerNotificationsScreen,
     page: () => const CustomerNotificationsScreen(),
   ),
   GetPage(
-    name: RoutesManager.notificationsStatusScreen,
+    name: RoutesManager.customerNotificationsStatusScreen,
     page: () => const CustomerNotificationStatusScreen(),
   ),
   GetPage(
-    name: RoutesManager.notificationsRejectScreen,
+    name: RoutesManager.customerNotificationsRejectScreen,
     page: () => const CustomerNotificationRejectScreen(),
     binding: CustomerNotificationsBinding(),
   ),
   GetPage(
-    name: RoutesManager.myProfileScreen,
+    name: RoutesManager.customerMyProfileScreen,
     page: () => const CustomerMyProfileScreen(),
     transition: Transition.zoom,
   ),
   GetPage(
-    name: RoutesManager.editMyProfileScreen,
+    name: RoutesManager.customerEditMyProfileScreen,
     page: () => const CustomerEditMyProfileScreen(),
     binding: CustomerEditProfileBinding(),
     transition: Transition.zoom,
   ),
   GetPage(
-    name: RoutesManager.changePasswordScreen,
+    name: RoutesManager.customerChangePasswordScreen,
     page: () => const CustomerChangePasswordScreen(),
     binding: ChangePasswordBinding(),
     transition: Transition.zoom,
   ),
   GetPage(
-    name: RoutesManager.accountBalanceScreen,
+    name: RoutesManager.customerAccountBalanceScreen,
     page: () => const CustomerAccountBalanceScreen(),
     binding: CustomerPaymentBinding(),
     transition: Transition.leftToRight,
     curve: Curves.easeIn,
   ),
   GetPage(
-    name: RoutesManager.addPaymentCardScreen,
+    name: RoutesManager.customerAddPaymentCardScreen,
     page: () => const CustomerAddPaymentCardScreen(),
     binding: CustomerPaymentBinding(),
   ),
   GetPage(
-    name: RoutesManager.addressScreen,
+    name: RoutesManager.customerAddressScreen,
     page: () => const CustomerAddressScreen(),
     transition: Transition.leftToRight,
   ),
   GetPage(
-    name: RoutesManager.servicesEvaluationScreen,
+    name: RoutesManager.customerServicesEvaluationScreen,
     page: () => const CustomerServicesEvaluationScreen(),
     transition: Transition.leftToRight,
   ),
   GetPage(
-    name: RoutesManager.editServicesEvaluationScreen,
+    name: RoutesManager.customerEditServicesEvaluationScreen,
     page: () => const CustomerEditServicesEvaluationScreen(),
   ),
   GetPage(
-    name: RoutesManager.feedbacksScreen,
+    name: RoutesManager.customerFeedbacksScreen,
     page: () => const CustomerFeedbacksScreen(),
     transition: Transition.leftToRight,
   ),
   GetPage(
-    name: RoutesManager.feedbackDetailsScreen,
+    name: RoutesManager.customerFeedbackDetailsScreen,
     page: () => const CustomerFeedbackDetailsScreen(),
     binding: CustomerFeedbackBinding(),
   ),
   GetPage(
-    name: RoutesManager.addFeedbackScreen,
+    name: RoutesManager.customerAddFeedbackScreen,
     page: () => const CustomerAddFeedbackScreen(),
     binding: CustomerFeedbackBinding(),
   ),
   GetPage(
-    name: RoutesManager.wishListScreen,
+    name: RoutesManager.customerWishListScreen,
     page: () => const CustomerWishListScreen(),
     transition: Transition.leftToRight,
   ),
   GetPage(
-    name: RoutesManager.settingsScreen,
+    name: RoutesManager.customerSettingsScreen,
     page: () => const CustomerSettingsScreen(),
     transition: Transition.leftToRight,
   ),
   GetPage(
-    name: RoutesManager.languagesScreen,
+    name: RoutesManager.customerLanguagesScreen,
     page: () => const CustomerLanguagesScreen(),
   ),
   GetPage(
-    name: RoutesManager.aboutUsScreen,
+    name: RoutesManager.customerAboutUsScreen,
     page: () => const CustomerAboutUsScreen(),
   ),
   GetPage(
-    name: RoutesManager.privacyPolicyScreen,
+    name: RoutesManager.customerPrivacyPolicyScreen,
     page: () => const CustomerPrivacyPolicyScreen(),
   ),
   GetPage(
-    name: RoutesManager.ourAddressScreen,
+    name: RoutesManager.customerOurAddressScreen,
     page: () => const CustomerOurAddressScreen(),
   ),
+  // Merchant
   GetPage(
     name: RoutesManager.merchantHomeScreen,
     page: () => const MerchantHomeScreen(),
@@ -244,7 +246,7 @@ final List<GetPage<dynamic>> getPages = [
     binding: CustomerNotificationsBinding(),
   ),
   GetPage(
-    name: RoutesManager.addProductScreen,
+    name: RoutesManager.merchantAddProductScreen,
     page: () => const MerchantAddProductScreen(),
     binding: MerchantProductsBinding(),
   ),
@@ -254,7 +256,7 @@ final List<GetPage<dynamic>> getPages = [
     binding: MerchantProductsBinding(),
   ),
   GetPage(
-    name: RoutesManager.addPackageScreen,
+    name: RoutesManager.merchantAddPackageScreen,
     page: () => const MerchantAddPackageScreen(),
     binding: MerchantPackagesBinding(),
   ),
@@ -264,7 +266,7 @@ final List<GetPage<dynamic>> getPages = [
     binding: MerchantPackagesBinding(),
   ),
   GetPage(
-    name: RoutesManager.addOfferScreen,
+    name: RoutesManager.merchantAddOfferScreen,
     page: () => const MerchantAddOfferScreen(),
     binding: MerchantOffersBinding(),
   ),
@@ -274,7 +276,7 @@ final List<GetPage<dynamic>> getPages = [
     binding: MerchantOffersBinding(),
   ),
   GetPage(
-    name: RoutesManager.customerEvaluationScreen,
+    name: RoutesManager.merchantEvaluationScreen,
     page: () => const MerchantEvaluationScreen(),
   ),
 ];

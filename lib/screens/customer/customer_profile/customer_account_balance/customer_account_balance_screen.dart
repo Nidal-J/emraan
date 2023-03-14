@@ -76,7 +76,7 @@ class CustomerAccountBalanceScreen extends GetView<CustomerPaymentController> {
               SizedBox(height: 10.h),
               ElevatedButton(
                 onPressed: () {
-                  Get.toNamed(RoutesManager.addPaymentCardScreen);
+                  Get.toNamed(RoutesManager.customerAddPaymentCardScreen);
                 },
                 child: const Text('إضافة بطاقة جديدة'),
               ),

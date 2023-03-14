@@ -57,7 +57,8 @@ class CustomerNotificationStatusScreen extends StatelessWidget {
                     Expanded(
                       child: OutlinedButton(
                         onPressed: () {
-                          Get.toNamed(RoutesManager.notificationsRejectScreen);
+                          Get.toNamed(
+                              RoutesManager.customerNotificationsRejectScreen);
                         },
                         style: OutlinedButton.styleFrom(
                             alignment: Alignment.center),

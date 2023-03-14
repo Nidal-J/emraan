@@ -61,8 +61,8 @@ class ServicesEvaluationScreen extends StatelessWidget {
                   IconButton(
                     padding: EdgeInsets.zero,
                     alignment: Alignment.centerLeft,
-                    onPressed: () =>
-                        Get.toNamed(RoutesManager.editServicesEvaluationScreen),
+                    onPressed: () => Get.toNamed(
+                        RoutesManager.customerEditServicesEvaluationScreen),
                     icon: const Icon(Icons.arrow_forward_ios_rounded),
                   ),
                 ],

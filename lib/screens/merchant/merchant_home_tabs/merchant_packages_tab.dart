@@ -17,7 +17,8 @@ class MerchantPackagesTab extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ElevatedButton(
-            onPressed: () => Get.toNamed(RoutesManager.addPackageScreen),
+            onPressed: () =>
+                Get.toNamed(RoutesManager.merchantAddPackageScreen),
             style: ElevatedButton.styleFrom(
               fixedSize: Size(Get.width * 0.4, 46.h),
             ),

@@ -28,8 +28,8 @@ class CustomerMyProfileScreen extends StatelessWidget {
                   SizedBox(
                     width: 110.w,
                     child: TextButton.icon(
-                      onPressed: () =>
-                          Get.toNamed(RoutesManager.editMyProfileScreen),
+                      onPressed: () => Get.toNamed(
+                          RoutesManager.customerEditMyProfileScreen),
                       icon: const Icon(
                         Icons.edit_outlined,
                         color: ColorsManager.subtitleColor,
@@ -87,7 +87,7 @@ class CustomerMyProfileScreen extends StatelessWidget {
               SizedBox(height: 42.h),
               ElevatedButton(
                 onPressed: () {
-                  Get.toNamed(RoutesManager.changePasswordScreen);
+                  Get.toNamed(RoutesManager.customerChangePasswordScreen);
                 },
                 child: const Text('تغيير كلمة المرور'),
               ),

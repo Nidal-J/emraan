@@ -22,7 +22,7 @@ class CustomerProductDetailsScreen
         actions: [
           IconButton(
             onPressed: () {
-              Get.toNamed(RoutesManager.cartScreen);
+              Get.toNamed(RoutesManager.customerCartScreen);
             },
             padding: EdgeInsets.symmetric(horizontal: 28.w),
             color: ColorsManager.iconsColor,

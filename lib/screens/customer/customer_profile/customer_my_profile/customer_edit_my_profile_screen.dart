@@ -78,7 +78,7 @@ class CustomerEditMyProfileScreen
   }
 
   void _performEditMyProfile() {
-    Get.offNamedUntil(RoutesManager.homeScreen, (route) => false);
+    Get.offNamedUntil(RoutesManager.customerHomeScreen, (route) => false);
     showSnackbar(message: 'تم تعديل الملف الشخصي بنجاح');
   }
 }

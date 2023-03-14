@@ -307,7 +307,7 @@ class MerchantOrderDetailsScreen extends GetView<MerchantOrdersController> {
   }
 
   _performRateCustomer() {
-    Get.toNamed(RoutesManager.customerEvaluationScreen);
+    Get.toNamed(RoutesManager.merchantEvaluationScreen);
   }
 }
 

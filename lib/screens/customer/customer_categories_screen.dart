@@ -27,7 +27,7 @@ class CustomerCategoriesScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 44.h),
           itemBuilder: (BuildContext context, int index) {
             return InkWell(
-              onTap: () => Get.toNamed(RoutesManager.productsScreen),
+              onTap: () => Get.toNamed(RoutesManager.customerProductsScreen),
               child: CustomerCategoryCardWidget(
                 image: ImagesManager.categories[index],
                 title: 'اسم الفئة',

@@ -45,8 +45,8 @@ class CustomerNotificationsScreen extends StatelessWidget {
             },
             itemBuilder: (BuildContext context, int index) {
               return InkWell(
-                onTap: () =>
-                    Get.toNamed(RoutesManager.notificationsStatusScreen),
+                onTap: () => Get.toNamed(
+                    RoutesManager.customerNotificationsStatusScreen),
                 child: Container(
                   color: notifications[index]['accepted']
                       ? ColorsManager.primary.withOpacity(0.2)

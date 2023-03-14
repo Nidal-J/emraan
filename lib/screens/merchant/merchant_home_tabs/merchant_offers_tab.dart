@@ -17,7 +17,7 @@ class MerchantOffersTab extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ElevatedButton(
-            onPressed: () => Get.toNamed(RoutesManager.addOfferScreen),
+            onPressed: () => Get.toNamed(RoutesManager.merchantAddOfferScreen),
             style: ElevatedButton.styleFrom(
               fixedSize: Size(Get.width * 0.4, 46.h),
             ),
